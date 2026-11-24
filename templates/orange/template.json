@@ -1,0 +1,127 @@
+{
+  "fruit": "orange",
+  "reference_base_sha256": "164018ea860876cdc8349840acdf5b988a589b3cbe5c5d14f75894011cc4bf7e",
+  "material_order": [
+    "Rind",
+    "Pulp",
+    "Membrane"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.04,
+      0.04
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements."
+  },
+  "materials": {
+    "Rind": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          740,
+          740
+        ],
+        "basis": "reported study value",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "E_MPa": {
+        "range": [
+          1.55,
+          1.55
+        ],
+        "basis": "reported study value",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "nu": {
+        "range": [
+          0.445,
+          0.445
+        ],
+        "basis": "reported study value",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1030,
+          1030
+        ],
+        "basis": "Composite density proxy.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "E_MPa": {
+        "range": [
+          0.055,
+          0.067
+        ],
+        "basis": "Design sensitivity ±10% around the 0.061 MPa pulp-with-wall composite; shared draw for both phases.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "nu": {
+        "range": [
+          0.46,
+          0.46
+        ],
+        "basis": "Composite Poisson ratio proxy.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      }
+    },
+    "Membrane": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1030,
+          1030
+        ],
+        "basis": "Composite density proxy.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "E_MPa": {
+        "range": [
+          0.055,
+          0.067
+        ],
+        "basis": "Design sensitivity ±10% around the 0.061 MPa pulp-with-wall composite; shared draw for both phases.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      },
+      "nu": {
+        "range": [
+          0.46,
+          0.46
+        ],
+        "basis": "Composite Poisson ratio proxy.",
+        "source": "https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156"
+      }
+    }
+  },
+  "stages": {
+    "reference": {
+      "texture": "original",
+      "materials": {},
+      "note": "One appearance class from the source asset. No maturity trend inferred."
+    }
+  },
+  "reserved_material_draws": 1
+}

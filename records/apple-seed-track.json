@@ -1,0 +1,12 @@
+{
+  "usd_prim": "/World/CulinaryCut/Fruit/Seeds/Seed_004",
+  "seed_count": 5,
+  "contact_definition": "First solver substep with positive blade-to-seed normal force.",
+  "first_contact_ms": 11.338054017754928,
+  "delta_xyz_mm": [
+    0.5925115577443754,
+    5.955465277245133,
+    -9.025986043477443
+  ],
+  "displacement_mm": 10.829915081457598
+}

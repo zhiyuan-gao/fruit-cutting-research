@@ -1,0 +1,120 @@
+# EmbodiedSWE whole avocado on its side, 30 mm offset from the nominal pit center.
+world:
+  grid_resolution: 120
+  bounds_min:
+  - -0.25
+  - 0.0
+  - -0.25
+  bounds_max:
+  - 0.25
+  - 0.5
+  - 0.25
+  dt: 5.0e-06
+  substeps: 6
+  gravity:
+  - 0.0
+  - -9.81
+  - 0.0
+  reso_exponent: 1.0
+cutting_mesh:
+  mesh_path: ../../assets/embodiedswe/avocado/whole.obj
+  sdf_voxel: 192
+  density: 850.0
+  particle_spacing: 0.002
+  elasticity:
+    youngs_modulus: 3.0e6
+    poisson_ratio: 0.33
+  grid_damping_ratio: 0.15
+  particle_damping: 0.8
+  restitution: 0.005
+  initial_transform:
+    translate:
+    - -0.10314
+    - 0.074794
+    - -0.03
+knife:
+  mesh_path: assets/knife.obj
+  sdf_voxel: 160
+  blade:
+    axis: Y
+    fraction: 0.55
+  motion:
+    cut_mode: cut
+    knife_start_y: 0.156
+    knife_stop_y: -0.01
+    cutting_speed_mps: 8.0
+    return_speed_mps: 8.0
+    z_offset: 0.0
+    saw:
+      amplitude_m: 0.005
+      frequency_hz: 2.0
+      axis: x
+  friction: 0.03
+  min_speed_floor_ratio: 0.1
+  speed_resistance:
+    c_norm_scale: 0.35
+    k_quad_per_s: 4.0
+board:
+  mesh_path: assets/board.obj
+  sdf_voxel: 160
+viewer:
+  camera_mode: top
+  initial_camera:
+    eye:
+    - 0.45
+    - 0.6
+    - 0.45
+    lookat:
+    - 0.0
+    - 0.1
+    - 0.0
+    up:
+    - 0.0
+    - 0.0
+    - -1.0
+    fov: 35.0
+  particle_radius: 0.0015
+  knife_render_stride: 4
+  lock_on_run: true
+  color_update_every: 6
+  show_grid: false
+cutting:
+  slices: 1
+  z_margin_ratio: 0.05
+  cut_order: right-to-left
+  dwell_frames: 6
+  tip_force_gain: 0.25
+  tip_band: 0.0018
+  no_stiffness_drop: true
+  tip_post_gain: 0.05
+  tip_post_band_mul: 3.0
+  tip_reso_exponent: 0.2
+  tip_post_above_board_only: true
+damage:
+  damage_v_hat: 0.35
+  damage_band: 0.0025
+  damage_visualization: true
+plasticity:
+  enabled: true
+  model: j2
+  yield_stress_kpa: 5.0
+  hardening_kpa: 0.0
+  viscoplastic_gamma: 0.0
+stability:
+  report_every: 100
+  J_warn_min: 0.1
+  J_warn_max: 4.0
+  max_speed_cap: 2.0
+  J_clamp_min: 0.1
+  J_clamp_max: 3.0
+output:
+  enabled: false
+  fps: 60.0
+  export:
+    enabled: false
+    out_dir: exports_avocado
+    format: ply
+  logging:
+    enabled: false
+    out_dir: logs
+    axis_map: maniskill

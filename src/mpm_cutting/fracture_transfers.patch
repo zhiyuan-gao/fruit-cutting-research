@@ -1,0 +1,73 @@
+--- upstream/sim.py
++++ fracture/sim.py
+@@ -656,9 +656,12 @@
+     def p2g(self):
+         ti.loop_config(block_dim=256)  # better occupancy on GPU
+         dx, inv_dx = self.dx_s[None], self.inv_dx_s[None]
++        self.fracture.active_nodes[None] = 0
++        self.fracture.contact_nodes[None] = 0
+         for I in ti.grouped(self.grid_m):
+             self.grid_m[I] = 0.0
+             self.grid_v[I] = ti.Vector([ti.f32(0.0), ti.f32(0.0), ti.f32(0.0)])
++            self.fracture.clear_node(I)
+ 
+         for p in range(self.pcount[None]):
+             part = self.particles[p]
+@@ -685,6 +688,9 @@
+                 stress_trial = stress_new
+                 part.alpha += alpha_inc
+ 
++            normal = ti.Vector.zero(ti.f32, 3)
++            if self.fracture.side[p] != 0:
++                normal = (FinvT @ self.fracture.reference_normal[p]).normalized()
+             vol = part.vol; mass = part.mass
+             # Precompute common values for optimization
+             dt_4_inv_dx2 = self.dt * 4.0 * inv_dx * inv_dx
+@@ -698,16 +704,21 @@
+                         weight = wx[i] * wy[j] * wz[k]
+                         weight_mass = weight * mass
+                         idx = base + off
+-                        self.grid_v[idx] += weight * (mass * (part.v + part.C @ dpos) + affine @ dpos)
+-                        self.grid_m[idx] += weight_mass
++                        momentum = weight * (mass * (part.v + part.C @ dpos) + affine @ dpos)
++                        self.fracture.scatter(p, idx, weight_mass, momentum, normal, -dpos)
+ 
+             self.particles[p] = part
+ 
+-        # grid update + collider response
+         for I in ti.grouped(self.grid_m):
+-            m = self.grid_m[I]
++            self.fracture.couple(I)
++
++        # Apply the native boundaries, collider response and damping to each channel.
++        for i, j, k, channel in ti.ndrange(self.n_grid, self.n_grid, self.n_grid, 2):
++            I = ti.Vector([i, j, k])
++            m = self.grid_m[I] if channel == 0 else self.fracture.mass[I]
+             if m > 0:
+-                v = self.grid_v[I] / m
++                momentum = self.grid_v[I] if channel == 0 else self.fracture.velocity[I]
++                v = momentum / m
+                 pos = self.grid_to_world(I)
+                 # Apply domain boundaries first (not counted as contact)
+                 if pos[1] <= (self.bounds_min[None][1] + 0.5*self.dx_s[None]) and v[1] < 0: v[1] = 0.0
+@@ -769,7 +780,10 @@
+                 v_len = v.norm()
+                 if v_len > v_cap_grid:
+                     v = (v_cap_grid / (v_len + 1e-12)) * v
+-                self.grid_v[I] = v
++                if channel == 0:
++                    self.grid_v[I] = v
++                else:
++                    self.fracture.velocity[I] = v
+ 
+     @ti.kernel
+     def g2p(self):
+@@ -792,7 +806,7 @@
+                         dpos = (ti.Vector([i,j,k]).cast(ti.f32) - fx) * dx
+                         weight = wx[i] * wy[j] * wz[k]
+                         idx = base + ti.Vector([i,j,k])
+-                        vg = self.grid_v[idx]
++                        vg = self.fracture.velocity[idx] if self.fracture.side[p] > 0 and self.fracture.mass[idx] > 0 else self.grid_v[idx]
+                         new_v += weight * vg
+                         new_C += 4.0*inv_dx*weight * vg.outer_product(dpos)
+ 

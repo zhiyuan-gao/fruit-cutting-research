@@ -1,0 +1,42 @@
+{
+  "examples/apple/2026_0000/fruit.usdz": {
+    "mesh_nodes": 9,
+    "resolved_textures": 1,
+    "movable_seeds": 5
+  },
+  "examples/avocado/2026_0000/fruit.usdz": {
+    "mesh_nodes": 3,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  },
+  "examples/banana/2026_0000/fruit.usdz": {
+    "mesh_nodes": 2,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  },
+  "examples/cucumber/2026_0000/fruit.usdz": {
+    "mesh_nodes": 3,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  },
+  "examples/melon/2026_0000/fruit.usdz": {
+    "mesh_nodes": 56,
+    "resolved_textures": 1,
+    "movable_seeds": 54
+  },
+  "examples/orange/2026_0000/fruit.usdz": {
+    "mesh_nodes": 11,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  },
+  "examples/peach/2026_0000/fruit.usdz": {
+    "mesh_nodes": 4,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  },
+  "examples/strawberry/2026_0000/fruit.usdz": {
+    "mesh_nodes": 3,
+    "resolved_textures": 1,
+    "movable_seeds": 0
+  }
+}

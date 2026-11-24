@@ -1,0 +1,48 @@
+{
+  "volume": "orange.npz",
+  "display_normal_smoothing_m": 0.007,
+  "surface_layers": {
+    "peel": "Rind",
+    "pulp": "Pulp"
+  },
+  "radial_segments": {
+    "count": 10,
+    "phase_rad": 0.14,
+    "twist_rad": 0.065
+  },
+  "materials": [
+    {
+      "name": "Rind",
+      "density": 920,
+      "youngs_modulus": 950000,
+      "poisson_ratio": 0.3,
+      "srgb": [
+        232,
+        131,
+        25
+      ]
+    },
+    {
+      "name": "Pulp",
+      "density": 1020,
+      "youngs_modulus": 380000,
+      "poisson_ratio": 0.3,
+      "srgb": [
+        255,
+        167,
+        40
+      ]
+    },
+    {
+      "name": "Membrane",
+      "density": 980,
+      "youngs_modulus": 740000,
+      "poisson_ratio": 0.32,
+      "srgb": [
+        255,
+        235,
+        177
+      ]
+    }
+  ]
+}

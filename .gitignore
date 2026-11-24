@@ -1,0 +1,13 @@
+.cache/
+__pycache__/
+.ruff_cache/
+third_party/
+examples/
+outputs/
+assets/embodiedswe/
+assets/tissues/references/
+assets/tissues/*.obj
+assets/tissues/*.npz
+*.usdz
+*.mp4
+templates/*/base.sha256

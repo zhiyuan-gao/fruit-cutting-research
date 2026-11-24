@@ -1,0 +1,135 @@
+{
+  "fruit": "banana",
+  "reference_base_sha256": "be86a74684b4c033028f132c2cc6c8e530f7fd74ac2b768c68d711537e0ffdea",
+  "material_order": [
+    "Peel",
+    "Pulp"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.075,
+      0.075
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements."
+  },
+  "materials": {
+    "Peel": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          900,
+          900
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      },
+      "E_MPa": {
+        "range": [
+          1.2,
+          1.2
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      },
+      "nu": {
+        "range": [
+          0.32,
+          0.32
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          970,
+          970
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.4,
+          0.4
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      },
+      "nu": {
+        "range": [
+          0.3,
+          0.3
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/banana.json"
+      }
+    }
+  },
+  "stages": {
+    "green": {
+      "texture": "banana_green",
+      "materials": {
+        "Peel": {
+          "E_MPa": {
+            "range": [
+              0.89,
+              1.05
+            ],
+            "basis": "measured interval or mean ± one reported SD",
+            "source": "https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf"
+          }
+        },
+        "Pulp": {
+          "E_MPa": {
+            "range": [
+              1.31,
+              1.35
+            ],
+            "basis": "measured interval or mean ± one reported SD",
+            "source": "https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf"
+          }
+        }
+      },
+      "note": "Brazil green quasi-static tissue measurements. No separate stalk material."
+    },
+    "yellow": {
+      "texture": "original",
+      "materials": {
+        "Pulp": {
+          "E_MPa": {
+            "range": [
+              0.4,
+              0.43
+            ],
+            "basis": "Engineering prior. Scale green compression modulus by Valery yellow/green dynamic ratio 0.85/2.72. Cultivar and test mode differ.",
+            "source": "https://doi.org/10.1111/j.1365-2621.1967.tb00854.x"
+          }
+        }
+      },
+      "note": "Original yellow peel, peel modulus retains the uncalibrated baseline."
+    }
+  }
+}

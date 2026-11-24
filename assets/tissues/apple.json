@@ -1,0 +1,84 @@
+{
+  "volume": "apple.npz",
+  "display_normal_smoothing_m": 0.007,
+  "surface_layers": {
+    "peel": "Peel",
+    "pulp": "Pulp"
+  },
+  "interior_meshes": [
+    "Core",
+    "Seeds"
+  ],
+  "geometry": {
+    "peel_thickness_m": 0.002
+  },
+  "materials": [
+    {
+      "name": "Peel",
+      "density": 850,
+      "youngs_modulus": 3000000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        180,
+        53,
+        36
+      ]
+    },
+    {
+      "name": "Pulp",
+      "density": 850,
+      "youngs_modulus": 3000000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        235,
+        224,
+        184
+      ]
+    },
+    {
+      "name": "Core",
+      "density": 850,
+      "youngs_modulus": 3000000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        207,
+        184,
+        134
+      ]
+    },
+    {
+      "name": "Seeds",
+      "density": 850,
+      "youngs_modulus": 3000000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        83,
+        47,
+        29
+      ]
+    },
+    {
+      "name": "Stem",
+      "density": 850,
+      "youngs_modulus": 3000000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        91,
+        60,
+        32
+      ]
+    }
+  ],
+  "mesh_variant": {
+    "mesh": "apple-with-stem.obj",
+    "source_sha256": "c624a3422206216d4e93f24fd7d2870f7bb4441b778f3e74fe85dceac0e4f865"
+  },
+  "stem": {
+    "base_center_m": [
+      -0.04,
+      0.105398,
+      0.0
+    ],
+    "scar_radius_m": 0.0046
+  }
+}

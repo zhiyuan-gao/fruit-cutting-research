@@ -1,0 +1,166 @@
+{
+  "fruit": "apple",
+  "reference_base_sha256": "d4ca1b0f4166db603ff291a6f16fbad2ede3a18fc54c69aee40db4a5a7f03e35",
+  "material_order": [
+    "Peel",
+    "Pulp",
+    "Core",
+    "Seeds",
+    "Stem"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.04,
+      0.04
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements."
+  },
+  "materials": {
+    "Peel": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          850,
+          850
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      },
+      "E_MPa": {
+        "range": [
+          11.6,
+          11.6
+        ],
+        "basis": "reported study value",
+        "source": "https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.3969/j.issn.1002-6819.2015.05.003.pdf"
+      },
+      "nu": {
+        "range": [
+          0.33,
+          0.33
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          850,
+          850
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      },
+      "E_MPa": {
+        "range": [
+          3.96,
+          4.3
+        ],
+        "basis": "Cross-study axial/effective stiffness bracket for an isotropic proxy; not biological scatter.",
+        "source": "https://www.aeeisp.com/njhyj/article/doi/10.13427/j.cnki.njyi.2021.04.028"
+      },
+      "nu": {
+        "range": [
+          0.33,
+          0.33
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      }
+    },
+    "Core": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          850,
+          850
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      },
+      "E_MPa": {
+        "range": [
+          6.5,
+          6.5
+        ],
+        "basis": "reported study value",
+        "source": "https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.3969/j.issn.1002-6819.2015.05.003.pdf"
+      },
+      "nu": {
+        "range": [
+          0.33,
+          0.33
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      }
+    },
+    "Seeds": {
+      "mode": "dynamic_rigid",
+      "density_kg_m3": {
+        "range": [
+          850,
+          850
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      }
+    },
+    "Stem": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          850,
+          850
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      },
+      "E_MPa": {
+        "range": [
+          141.37,
+          141.37
+        ],
+        "basis": "reported study value",
+        "source": "https://www.mdpi.com/2077-0472/14/12/2280"
+      },
+      "nu": {
+        "range": [
+          0.33,
+          0.33
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/apple.json"
+      }
+    }
+  },
+  "stages": {
+    "reference": {
+      "texture": "original",
+      "materials": {},
+      "note": "One appearance class from the source asset. No maturity trend inferred."
+    }
+  }
+}

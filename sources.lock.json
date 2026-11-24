@@ -1,0 +1,312 @@
+[
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/apple.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/apple.mtl",
+    "sha256": "cca0c82e9bb5ad5ac4c5c59c948c402effa65a4904dbf4adb2d5d9246204027b"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/apple.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/apple.obj",
+    "sha256": "c624a3422206216d4e93f24fd7d2870f7bb4441b778f3e74fe85dceac0e4f865"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/apple_skin.jpg",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/apple_skin.jpg",
+    "sha256": "c257e7da6c90e22fe304dfff94f1ef17cc8630fca79d39833ba60eb59518fb40"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/banana.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/banana.mtl",
+    "sha256": "bda60efcc4f6be1f76ec4dadcc056051d76fa08176d2e0508f1e179b358fb6b5"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/banana.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/banana.obj",
+    "sha256": "6aa399108f106968e67e53c926b719f44a9d0552a6eb0eba0520eb1606df0e0d"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/banana_diffuse.jpg",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/banana_diffuse.jpg",
+    "sha256": "52fb2b11218544c4db0e05449c50d3161e48d0fa2bb7c3a444f57984db1289de"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/board.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/board.mtl",
+    "sha256": "b42467a494fcfa1c747fc8e46fced8bd800f596822ba69dac0685525d09f7d7e"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/board.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/board.obj",
+    "sha256": "07d5a38b56bd91ac60024341f33f6f81db0a504dcff1dfcf11c6e6a9643b6db6"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/cucumber.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/cucumber.mtl",
+    "sha256": "bdf3cf5dc794b30d6dc2f9a9dd7c3b431752fbc5697a778ad2a0dd383550f26e"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/cucumber.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/cucumber.obj",
+    "sha256": "c8997fcb65c6d6f50f4d5eabd73053d14484e96bc66edd6905e524d9ff716a1c"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/cucumber_skin.png",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/cucumber_skin.png",
+    "sha256": "757a17689b44769177a5a8e730592d572613788ad4e75499343c533f68016bd2"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/knife.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/knife.mtl",
+    "sha256": "a0ca80402123e8c0dd3a1efaaba8e1c0332a2ec2b441ee5f6aec0429526ba00b"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/knife.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/knife.obj",
+    "sha256": "eccc95021c71419cdefdf676819948e7405f659cdafe576f76c416236e2b33ae"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/melon.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/melon.mtl",
+    "sha256": "db560974b59067acf2209829fcf46941f8f7ca72e79957f49d240ed8cf9bbd35"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/melon.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/melon.obj",
+    "sha256": "b479d9a6784c6f498ecabee600ac0deab314688610eb7a46c46d312f81c2a16c"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/melon_skin.jpg",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/melon_skin.jpg",
+    "sha256": "a1d47f72364d59124dbdbcb50c4490f6c4f1b0c64bde0101de1e9160c0658375"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/orange.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/orange.mtl",
+    "sha256": "6f1c4b344ecf30897e4d0ff29062deb77588c7552f0413174ebfeb657b88312d"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/orange.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/orange.obj",
+    "sha256": "86720da037f59f7f9306682ab16e081e0800eadfb88f997c0871814eb51a6df9"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/orange_skin.jpg",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/orange_skin.jpg",
+    "sha256": "8f4babf6021e3f543084d8efa5456dcb601a1603e8f6b0df0a85d027ebc2570b"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/peach.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/peach.mtl",
+    "sha256": "6a217b828ebbb116aebdc320fe3404d74aef6cefb665af3905d4e08bc3cd0937"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/peach.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/peach.obj",
+    "sha256": "51dae87754d157a6f435a6efe368a7154d82d4efe9bfd4400eff48af7940bd0b"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/peach_skin.JPG",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/peach_skin.JPG",
+    "sha256": "72f66198e499e49c4d2301ab9e7dc195d0d3bae0e896cd3f511413a4390c55d5"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/strawberry.mtl",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/strawberry.mtl",
+    "sha256": "98c1fe891c1c4def6b70d33b9a4b56aba12502cb34c2940c3d8f9f8a43fdc8a4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/strawberry.obj",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/strawberry.obj",
+    "sha256": "4d1347e6f5081d6343e9f7827ab00322555d727d7f409dc5b4af731fc6ac7322"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/assets/strawberry_skin.jpg",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/assets/strawberry_skin.jpg",
+    "sha256": "6c96a62f8a317cc715c59b8877492be0cca3754ccae4e1b9df057e0786481c26"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/cache_sdf/cuttingmesh.0d3131804910fe32.npz",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/cache_sdf/cuttingmesh.0d3131804910fe32.npz",
+    "sha256": "6c2932feba76757aee9b90d4498106d7275d6493e42695d37e5e4bed0f9b52ef"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/cache_sdf/cuttingmesh.14f8e58b712e7bd7.npz",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/cache_sdf/cuttingmesh.14f8e58b712e7bd7.npz",
+    "sha256": "10df3c5d8ff5be4eaa6e52b9aab37bf90bac8b8fd93c0463ab7617f2cc02a7f1"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/cache_sdf/cuttingmesh.39c69c51116522b1.npz",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/cache_sdf/cuttingmesh.39c69c51116522b1.npz",
+    "sha256": "88e9337e4756f689a4d262a23fc5459c1991bf83521f65b3284206ddee3b8c6f"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/cache_sdf/cuttingmesh.42350eff172e367f.npz",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/cache_sdf/cuttingmesh.42350eff172e367f.npz",
+    "sha256": "be5cd4ec9c31a13d61231509968444e45729f5be1d1b1e165bfc34355f78cb60"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/cache_sdf/cuttingmesh.49b82aef1ec8d5c5.npz",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/cache_sdf/cuttingmesh.49b82aef1ec8d5c5.npz",
+    "sha256": "5ad1e28c700ddd8c2ab11036581a32deec876043cd611afee8dc8b68d61bdbbb"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/apple.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/apple.yaml",
+    "sha256": "1c67150df3ca6bce65a7962aebe8ce0d21934673f05581fc069007e509a5cc8e"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/banana.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/banana.yaml",
+    "sha256": "c5f080f87cea6c5ba08ae2921b9208aeae55a087dc2623c06b70b43a167992b9"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/cucumber.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/cucumber.yaml",
+    "sha256": "45129ac840b9fcaab78f435d015055d1d6385d2b8eb26f9a1e8b7a664efb9233"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/example_cutting.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/example_cutting.yaml",
+    "sha256": "c2ac00933d0386e6a299f0659e8c8ee792d6b977de45618ff0775d9037b3e935"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/melon.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/melon.yaml",
+    "sha256": "f19cc4dff3f4bf2e25a1a14ec0b4a072f2791ccacad0986c28185b7b4345a810"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/orange.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/orange.yaml",
+    "sha256": "0b48edba4cdd3af181c7a8061d0fb4835d76451302ad689913ccac883be32ea9"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/peach.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/peach.yaml",
+    "sha256": "746cd5f7736711b08cf740c604ba8a0ac9f435e2c4e24074de63c4193f8be6da"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/configs/strawberry.yaml",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/configs/strawberry.yaml",
+    "sha256": "042bba073bf7f5bd1799af15d725b49a0036310aa67db1243b01c97dd3f1abb7"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/io_utils/__init__.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/io_utils/__init__.py",
+    "sha256": "f760ebb7aa3dd46ff6e47a4ed72e0e81a1caa77654760835abf5e26f610aebc4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/io_utils/output_manager.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/io_utils/output_manager.py",
+    "sha256": "93802f04a96136df422aab0ffd5a85cc4d3a8a4bf704f51186597c807f94c997"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/mpmcore/__init__.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/mpmcore/__init__.py",
+    "sha256": "f760ebb7aa3dd46ff6e47a4ed72e0e81a1caa77654760835abf5e26f610aebc4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/mpmcore/colliders.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/mpmcore/colliders.py",
+    "sha256": "0aa12164135305c0a60397b5d3a236f48cd7488a7bc0ec6072f1a22199dd17c3"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/mpmcore/sim.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/mpmcore/sim.py",
+    "sha256": "95676f216942ccb25a5a348d508c01e6e3f06ffaff36686b50ae915fc72209d2"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/physics/__init__.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/physics/__init__.py",
+    "sha256": "f760ebb7aa3dd46ff6e47a4ed72e0e81a1caa77654760835abf5e26f610aebc4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/physics/elastic.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/physics/elastic.py",
+    "sha256": "106517dd93dc60c7bdbeb8fe021917db74276fdc366861e7fabe858c26661c5b"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/physics/plastic.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/physics/plastic.py",
+    "sha256": "e594f8530475b7274d3eda8413defa029120f3f5b9e3f36a57ec85c296cfdc32"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/render_utils/__init__.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/render_utils/__init__.py",
+    "sha256": "f760ebb7aa3dd46ff6e47a4ed72e0e81a1caa77654760835abf5e26f610aebc4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/render_utils/renderer.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/render_utils/renderer.py",
+    "sha256": "1bb94a1bf6c05bc10d1a54b3e9e78363fce03b317525b44d0c9da24a920d14af"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/run.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/run.py",
+    "sha256": "36c45d9d8473fa48c40093bda6649d071d595114f7a1596953f5cd016264e09e"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/sdf_utils/__init__.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/sdf_utils/__init__.py",
+    "sha256": "f760ebb7aa3dd46ff6e47a4ed72e0e81a1caa77654760835abf5e26f610aebc4"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/sdf_utils/mesh_sdf.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/sdf_utils/mesh_sdf.py",
+    "sha256": "c9c623256584ee767f5ab9249b1f0cd736f272ca4a2e6261a8f83074c04bafbe"
+  },
+  {
+    "path": "third_party/EEF-Cutting-Simulation/sdf_utils/transforms.py",
+    "url": "https://raw.githubusercontent.com/Chayoso/EEF-Cutting-Simulation/c18304aa83744da0021472c0a63430005a4fc28c/sdf_utils/transforms.py",
+    "sha256": "7020ddb0ebd392f428ccb3b149fabb5562f5f46ed59eabc73423a0064e959ad6"
+  },
+  {
+    "path": ".cache/gaussianfluent/apple.ply",
+    "url": "https://huggingface.co/hbpencil01/GaussianFluent/resolve/bb5817eb88b1eff64e4271b445a22b9fc42c0925/model/trained_gs_fruitninja/apple.ply",
+    "sha256": "2ef59241667ef97ea2ff9e506c74df4d1914bedc97144c549388e3592f66e8b7"
+  },
+  {
+    "path": ".cache/gaussianfluent/orange.ply",
+    "url": "https://huggingface.co/hbpencil01/GaussianFluent/resolve/bb5817eb88b1eff64e4271b445a22b9fc42c0925/model/trained_gs_fruitninja/orange.ply",
+    "sha256": "42f0d6acaab6820fd013ab9a7d8471f7c3e5582cff811924ae3c0f423054886e"
+  },
+  {
+    "path": ".cache/gaussianfluent/watermelon.ply",
+    "url": "https://huggingface.co/hbpencil01/GaussianFluent/resolve/bb5817eb88b1eff64e4271b445a22b9fc42c0925/model/watermelon/point_cloud/iteration_30000/point_cloud.ply",
+    "sha256": "fc5c4871b5f0b78714a5eafe4f174c3d874a29b541fb0afd9fff1a556d55c834"
+  },
+  {
+    "path": "assets/tissues/references/banana-high-detail.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Banana_high_detail.jpg",
+    "sha256": "a2bbb866efd6e1c8be53bdc7094a7a3c9648fc713d2a42c62809277745ba5d32"
+  },
+  {
+    "path": "assets/tissues/references/peach-section.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/86/USDA_Eat_Healthy_Food_Group_Gallery_serving_size_half_large_peach.jpg",
+    "sha256": "440783040536f5ef9ba1c142c6e513957adeb06baeab6a00f3e93a3dacad899d"
+  },
+  {
+    "path": "assets/tissues/references/peach-stone.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flavorcrest_peaches.jpg",
+    "sha256": "0b42fd784c8005b0f2b9822b474d2fd536288f3eb41da552f5a68df7669db9f6"
+  },
+  {
+    "path": "assets/tissues/references/cucumber-section.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/21Cucumber_slices.jpg",
+    "sha256": "4a348481f633a7a95ca863d464e99fc48fc21161481412a16f40b7af4e3454bf"
+  },
+  {
+    "path": "assets/tissues/references/strawberry-section.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Strawberry_Half.jpg",
+    "sha256": "ecae3b55907b79b57145976f7c4e4cad1b73d1ca5b8757bbe3da474add9db2d2"
+  },
+  {
+    "path": "assets/embodiedswe/avocado/avocado.usd",
+    "url": "https://huggingface.co/datasets/EmbodiedSWE/robobench-assets/resolve/62fab5b70ccb0103c60c4ca39236abae2cc8e900/robobench/suites/packing/assets/clear_organic_objects/avocado/avocado.usd",
+    "sha256": "a56cf621a541233cceab2e8b01b4c37767b931ca52652b5fdff8d3cc71255312"
+  },
+  {
+    "path": "assets/embodiedswe/avocado/textures/avocado01/textures/Avocado01_A.png",
+    "url": "https://huggingface.co/datasets/EmbodiedSWE/robobench-assets/resolve/62fab5b70ccb0103c60c4ca39236abae2cc8e900/robobench/suites/packing/assets/clear_organic_objects/avocado/textures/avocado01/textures/Avocado01_A.png",
+    "sha256": "df61e0298563c5c0ba2134b17cd50630adb35f5ecd378c18b0d036b6f7c62cc8"
+  }
+]

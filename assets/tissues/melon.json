@@ -1,0 +1,16 @@
+{
+  "volume": "melon.npz",
+  "display_normal_smoothing_m": 0.005,
+  "surface_layers": {"peel": "Rind", "pulp": "Pulp"},
+  "interior_meshes": ["Seed"],
+  "geometry": {
+    "rind_display_smoothing_m": 0.009,
+    "seed_dimensions_m": [0.012, 0.0072, 0.0052],
+    "min_seed_center_spacing_m": 0.017
+  },
+  "materials": [
+    {"name": "Rind", "density": 980,  "youngs_modulus": 1800000, "poisson_ratio": 0.34, "srgb": [187, 214, 141]},
+    {"name": "Pulp", "density": 1050, "youngs_modulus": 520000,  "poisson_ratio": 0.39, "srgb": [233, 77, 84]},
+    {"name": "Seed", "density": 1200, "youngs_modulus": 3500000, "poisson_ratio": 0.29, "srgb": [55, 39, 36]}
+  ]
+}

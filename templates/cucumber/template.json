@@ -1,0 +1,127 @@
+{
+  "fruit": "cucumber",
+  "reference_base_sha256": "44c19cf311c1132aced2437580715e255a97a3039d87ce95915b22b1d4aafaa1",
+  "material_order": [
+    "Peel",
+    "Pulp",
+    "SeedChamber"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.075,
+      0.075
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements."
+  },
+  "materials": {
+    "Peel": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1045,
+          1095
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "E_MPa": {
+        "range": [
+          9.45,
+          14.55
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "nu": {
+        "range": [
+          0.23,
+          0.31
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          928,
+          972
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "E_MPa": {
+        "range": [
+          1.26,
+          1.74
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "nu": {
+        "range": [
+          0.34,
+          0.364
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      }
+    },
+    "SeedChamber": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          942,
+          978
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "E_MPa": {
+        "range": [
+          1.47,
+          2.13
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      },
+      "nu": {
+        "range": [
+          0.359,
+          0.401
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://www.mdpi.com/2077-0472/16/19/2113"
+      }
+    }
+  },
+  "stages": {
+    "reference": {
+      "texture": "original",
+      "materials": {},
+      "note": "One appearance class from the source asset. No maturity trend inferred."
+    }
+  },
+  "reserved_material_draws": 1
+}

@@ -1,0 +1,49 @@
+水果,项目材料,试样条件,试验或用途,弹性模量_MPa,密度_kg_m3,泊松比,其他测量量,其他数值,单位,统计与映射说明,原始论文
+黄瓜,Peel,中农翠玉3号,皮条拉伸,12.00 ± 2.55,1070 ± 25,0.27 ± 0.04,拉伸峰值应力,1.05 ± 0.42,MPa,表2均值±SD；密度n=10，力学试验n=15,https://www.mdpi.com/2077-0472/16/19/2113
+黄瓜,Pulp,中农翠玉3号,果肉初始压缩,1.50 ± 0.24,950 ± 22,0.352 ± 0.012,特征转折应力,0.20 ± 0.06,MPa,表2均值±SD；密度n=10，力学试验n=15,https://www.mdpi.com/2077-0472/16/19/2113
+黄瓜,SeedChamber,中农翠玉3号,中央组织初始压缩,1.80 ± 0.33,960 ± 18,0.380 ± 0.021,特征转折应力,0.15 ± 0.04,MPa,表2均值±SD；中央组织整体，仅可近似籽腔，不能给单粒Seeds赋值,https://www.mdpi.com/2077-0472/16/19/2113
+橙子,Rind,纽荷尔脐橙,果皮拉伸 10 mm/min,1.550,740,0.445,生物屈服应力,0.270,MPa,表1报告值；整层果皮,https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156
+橙子,Pulp + Membrane,纽荷尔脐橙,带瓣墙果肉压缩 10 mm/min,0.061,1030,0.460,生物屈服应力,0.017,MPa,表1报告值；用作复合组织试样目标，分开的两种材料需另行约束,https://nygcxb.ijournals.cn/nygcxb/article/pdf/zaq-202406156
+橙子,Rind,甜橙,整层果皮沿厚度准静态受压,0.01985,,,,,,表4中位数；原文19.85 kPa，不与皮条面内拉伸合并,https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2022.979151/full
+橙子,Seed,Late Valencia，洗净后太阳能干燥至恒重,离体干燥种子真密度,,510.04 ± 4.92,,,,,表2均值±SD；不能直接给鲜果内种子赋值,https://onlinelibrary.wiley.com/doi/10.1155/2021/6415620
+橙子,Seed,Red Blood，洗净后太阳能干燥至恒重,离体干燥种子真密度,,566.69 ± 6.92,,,,,表2均值±SD；不能直接给鲜果内种子赋值,https://onlinelibrary.wiley.com/doi/10.1155/2021/6415620
+香蕉,Peel,青熟巴西蕉，首梳及第二梳内排,果身皮条拉伸 5 mm/min,0.93 ± 0.08,,,,,,同一试验的位置分组，取自果身，不覆盖香蕉梗,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Pulp,青熟巴西蕉，首梳及第二梳内排,果肉柱压缩 5 mm/min,1.33 ± 0.10,,,,,,同一试验的位置分组,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Peel,青熟巴西蕉，首梳及第二梳外排,果身皮条拉伸 5 mm/min,0.89 ± 0.10,,,,,,同一试验的位置分组，取自果身，不覆盖香蕉梗,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Pulp,青熟巴西蕉，首梳及第二梳外排,果肉柱压缩 5 mm/min,1.31 ± 0.11,,,,,,同一试验的位置分组,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Peel,青熟巴西蕉，尾梳内外排,果身皮条拉伸 5 mm/min,1.05 ± 0.11,,,,,,同一试验的位置分组，取自果身，不覆盖香蕉梗,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Pulp,青熟巴西蕉，尾梳内外排,果肉柱压缩 5 mm/min,1.35 ± 0.10,,,,,,同一试验的位置分组,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.11975/j.issn.1002-6819.202305013.pdf
+香蕉,Pulp,Valery，浅绿,圆柱果肉声学共振,2.72,,,,,,动态模量，原文dyn/cm²换算，不能直接代替准静态压缩模量,https://doi.org/10.1111/j.1365-2621.1967.tb00854.x
+香蕉,Pulp,Valery，黄熟,圆柱果肉声学共振,0.85,,,,,,动态模量，原文dyn/cm²换算，不能直接代替准静态压缩模量,https://doi.org/10.1111/j.1365-2621.1967.tb00854.x
+牛油果,Pulp,Hass，成熟实验初期,果肉切片压缩质构测试,2.29 ± 0.75,,,,,,试验两个成熟阶段的结果，同文另测超声,https://www.sciencedirect.com/science/article/abs/pii/S0260877420303563
+牛油果,Pulp,Hass，成熟实验末期,果肉切片压缩质构测试,0.16 ± 0.08,,,,,,试验两个成熟阶段的结果，同文另测超声,https://www.sciencedirect.com/science/article/abs/pii/S0260877420303563
+牛油果,Pit,Hass,离体种子 Warner–Bratzler 刀片,,,,切割峰值力,102.6,N,第3.7节，整颗种子的试验响应，依赖刀具与试样，固定刚体模型不计算该破坏峰值,https://onlinelibrary.wiley.com/doi/10.1155/2019/3563750
+牛油果,Pit,Negra de la Cruz,离体种子 Warner–Bratzler 刀片,,,,切割峰值力,92.8,N,第3.7节，整颗种子的试验响应，依赖刀具与试样，固定刚体模型不计算该破坏峰值,https://onlinelibrary.wiley.com/doi/10.1155/2019/3563750
+苹果,Peel,红富士,拉伸,11.6,,,破坏应力,0.46,MPa,原始研究表1；果芯为中央组织，果芯值不能外推给单颗苹果籽；论文中ν=0.35为假设,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.3969/j.issn.1002-6819.2015.05.003.pdf
+苹果,Pulp,红富士,平板压缩,4.3,,,破坏应力,0.31,MPa,原始研究表1；果芯为中央组织，果芯值不能外推给单颗苹果籽；论文中ν=0.35为假设,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.3969/j.issn.1002-6819.2015.05.003.pdf
+苹果,Core,红富士,平板压缩,6.5,,,破坏应力,0.37,MPa,原始研究表1；果芯为中央组织，果芯值不能外推给单颗苹果籽；论文中ν=0.35为假设,https://www.aeeisp.com/nygcxb/cn/article/pdf/preview/10.3969/j.issn.1002-6819.2015.05.003.pdf
+苹果,Pulp,径向,定向压缩,2.81 ± 0.37,,,,,,数值及±按论文摘要；单一各向同性E需按目标工况选择,https://www.aeeisp.com/njhyj/article/doi/10.13427/j.cnki.njyi.2021.04.028
+苹果,Pulp,轴向,定向压缩,3.96 ± 0.69,,,,,,数值及±按论文摘要；单一各向同性E需按目标工况选择,https://www.aeeisp.com/njhyj/article/doi/10.13427/j.cnki.njyi.2021.04.028
+苹果,Peel,丹霞，新鲜,果皮拉伸,18.81 ± 2.50,,,,,,新鲜果皮不同部位的汇总均值±SD,https://doi.org/10.1080/10942912.2016.1203934
+苹果,Peel,Starkrimson，新鲜,果皮拉伸,22.81 ± 3.01,,,,,,新鲜果皮不同部位的汇总均值±SD,https://doi.org/10.1080/10942912.2016.1203934
+苹果,Stem,红富士，采收成熟,果柄轴向拉伸,141.37,,,轴向拉伸破坏应力,5.56,MPa,20组均值，屈服应力3.14 MPa；论文中ν=0.4为假设,https://www.mdpi.com/2077-0472/14/12/2280
+桃子,Peel,Red Haven,皮样拉伸,0.39–1.58,,,,,,表IV中10个试样的实测最小值至最大值,https://acta.mendelu.cz/pdfs/acu/2011/01/03.pdf
+桃子,Pulp,冈山梦白桃，不同成熟度,测力计取值用于果实振动模型,4 / 8 / 12,,,,,,作者从不同成熟度实测值中选取的三个模型输入；不能称为所有鲜桃的范围,https://www.jstage.jst.go.jp/article/hortj/87/2/87_OKD-094/_html/-char/en
+桃子,Stone,冈山梦白桃,裂核研究中以实测值确定核壳模量,350,,,,,,表1及正文；硬质核壳单值，与壳内种仁不同；不代表破裂强度,https://www.jstage.jst.go.jp/article/hortj/87/2/87_OKD-094/_html/-char/en
+桃子,Stem,采摘试验桃果柄,预试验拉伸及物性测量,18.5,1050,0.36,,,,表1报告值；不代表桃树枝或果肉,https://www.mdpi.com/2077-0472/16/9/979
+草莓,Peel + Pulp,红颜，外层组织,试块压缩 1 mm/s,0.36 ± 0.03,,,压缩失效应力,0.059 ± 0.002,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+草莓,Peel + Pulp,红颜，外层组织,试块压缩 3 mm/s,0.44 ± 0.03,,,压缩失效应力,0.076 ± 0.004,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+草莓,Peel + Pulp,红颜，外层组织,试块压缩 5 mm/s,0.58 ± 0.04,,,压缩失效应力,0.085 ± 0.012,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+草莓,Pith,红颜，内层组织,试块压缩 1 mm/s,0.42 ± 0.03,,,压缩失效应力,0.076 ± 0.005,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+草莓,Pith,红颜，内层组织,试块压缩 3 mm/s,0.51 ± 0.19,,,压缩失效应力,0.090 ± 0.034,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+草莓,Pith,红颜，内层组织,试块压缩 5 mm/s,0.66 ± 0.10,,,压缩失效应力,0.114 ± 0.019,MPa,表4均值±SD，n=5；外层混合组织，内层含髓部及中央柱，与项目边界近似对应,https://doi.org/10.1016/j.jfoodeng.2020.110016
+西瓜,Pulp,Crimson Sweet，红瓤,圆柱压缩,0.536 ± 0.096,,,失效应力,0.027 ± 0.005,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Rind,Crimson Sweet，白皮,圆柱压缩,0.902 ± 0.168,,,失效应力,0.272 ± 0.051,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Rind,Crimson Sweet，绿外皮,皮条拉伸,4.937 ± 0.533,,,失效应力,1.231 ± 0.117,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Pulp,Charleston Gray，红瓤,圆柱压缩,0.396 ± 0.062,,,失效应力,0.037 ± 0.008,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Rind,Charleston Gray，白皮,圆柱压缩,1.202 ± 0.187,,,失效应力,0.262 ± 0.084,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Rind,Charleston Gray，绿外皮,皮条拉伸,5.357 ± 0.683,,,失效应力,1.144 ± 0.159,MPa,表2均值±SD，n=20；项目Rind覆盖两个皮层,https://doi.org/10.1016/j.jfoodeng.2007.10.007
+西瓜,Seed,黑籽，含水率6.5%–27.8%（干基）,纵向压缩,,,,单籽压缩力,15.68–29.54,N,试验含水率区间的测值范围；不能作为鲜果内籽的材料模量或刀切阈值,https://dergipark.org.tr/en/pub/turkager/article/977216
+西瓜,Seed,黑籽，含水率6.5%–27.8%（干基）,横向压缩,,,,单籽压缩力,14.71–38.36,N,试验含水率区间的测值范围；不能作为鲜果内籽的材料模量或刀切阈值,https://dergipark.org.tr/en/pub/turkager/article/977216
+西瓜,Seed,褐籽，含水率6.5%–27.8%（干基）,纵向压缩,,,,单籽压缩力,14.18–36.49,N,试验含水率区间的测值范围；不能作为鲜果内籽的材料模量或刀切阈值,https://dergipark.org.tr/en/pub/turkager/article/977216
+西瓜,Seed,褐籽，含水率6.5%–27.8%（干基）,横向压缩,,,,单籽压缩力,16.47–41.82,N,试验含水率区间的测值范围；不能作为鲜果内籽的材料模量或刀切阈值,https://dergipark.org.tr/en/pub/turkager/article/977216

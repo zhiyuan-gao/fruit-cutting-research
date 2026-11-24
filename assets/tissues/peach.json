@@ -1,0 +1,72 @@
+{
+  "volume": "peach.npz",
+  "mesh_variant": {
+    "mesh": "peach-body.obj",
+    "source_sha256": "51dae87754d157a6f435a6efe368a7154d82d4efe9bfd4400eff48af7940bd0b"
+  },
+  "display_normal_smoothing_m": 0.0065,
+  "surface_layers": {
+    "peel": "Peel",
+    "pulp": "Pulp"
+  },
+  "interior_meshes": [
+    "Stone"
+  ],
+  "geometry": {
+    "peel_thickness_m": 0.0019
+  },
+  "materials": [
+    {
+      "name": "Peel",
+      "density": 968,
+      "youngs_modulus": 890000,
+      "poisson_ratio": 0.29,
+      "srgb": [
+        224,
+        143,
+        95
+      ]
+    },
+    {
+      "name": "Pulp",
+      "density": 968,
+      "youngs_modulus": 890000,
+      "poisson_ratio": 0.29,
+      "srgb": [
+        250,
+        193,
+        110
+      ]
+    },
+    {
+      "name": "Stone",
+      "density": 968,
+      "youngs_modulus": 890000,
+      "poisson_ratio": 0.29,
+      "srgb": [
+        149,
+        79,
+        44
+      ]
+    },
+    {
+      "name": "Stem",
+      "density": 968,
+      "youngs_modulus": 890000,
+      "poisson_ratio": 0.29,
+      "srgb": [
+        105,
+        72,
+        42
+      ]
+    }
+  ],
+  "stem": {
+    "base_center_m": [
+      -0.01837367,
+      0.12680133,
+      0.00993883
+    ],
+    "scar_radius_m": 0.0074
+  }
+}

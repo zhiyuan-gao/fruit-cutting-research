@@ -1,0 +1,17 @@
+{
+  "fruit": "orange",
+  "ticks": 6389,
+  "time_s": 0.03194500000000396,
+  "dt_s": 5e-06,
+  "soft_particles": 125948,
+  "maximum_soft_displacement_m": 0.005036508058124406,
+  "soft_knife_accumulated_impulse_Ns": 23.240656280911953,
+  "cut_side_particles": [
+    23651,
+    26509
+  ],
+  "test": "Skin to board in seedless segmented orange",
+  "speed_m_s": 4.0,
+  "blade_travel_m": 0.12778000000001585,
+  "seed_count": 0
+}

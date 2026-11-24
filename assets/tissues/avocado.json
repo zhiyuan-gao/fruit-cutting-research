@@ -1,0 +1,54 @@
+{
+  "volume": "avocado.npz",
+  "display_normal_smoothing_m": 0.003,
+  "surface_layers": {
+    "peel": "Peel",
+    "pulp": "Pulp"
+  },
+  "geometry": {
+    "peel_thickness_m": 0.0025,
+    "pit_center_in_upright_fruit_m": [
+      0.0,
+      0.0,
+      0.0602
+    ],
+    "pit_radii_m": [
+      0.022,
+      0.02,
+      0.028
+    ]
+  },
+  "materials": [
+    {
+      "name": "Peel",
+      "density": 960,
+      "youngs_modulus": 1300000,
+      "poisson_ratio": 0.32,
+      "srgb": [
+        69,
+        88,
+        47
+      ]
+    },
+    {
+      "name": "Pulp",
+      "density": 980,
+      "youngs_modulus": 380000,
+      "poisson_ratio": 0.33,
+      "srgb": [
+        205,
+        220,
+        130
+      ]
+    },
+    {
+      "name": "Pit",
+      "rigid": true,
+      "srgb": [
+        144,
+        86,
+        49
+      ]
+    }
+  ]
+}

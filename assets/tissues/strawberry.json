@@ -1,0 +1,49 @@
+{
+  "volume": "strawberry.npz",
+  "display_normal_smoothing_m": 0.0045,
+  "surface_layers": {
+    "peel": "Peel",
+    "pulp": "Pulp"
+  },
+  "interior_meshes": [
+    "Pith"
+  ],
+  "geometry": {
+    "peel_thickness_m": 0.0017
+  },
+  "materials": [
+    {
+      "name": "Peel",
+      "density": 1010,
+      "youngs_modulus": 200000,
+      "poisson_ratio": 0.4,
+      "srgb": [
+        178,
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Pulp",
+      "density": 1010,
+      "youngs_modulus": 200000,
+      "poisson_ratio": 0.4,
+      "srgb": [
+        212,
+        58,
+        60
+      ]
+    },
+    {
+      "name": "Pith",
+      "density": 1010,
+      "youngs_modulus": 200000,
+      "poisson_ratio": 0.4,
+      "srgb": [
+        231,
+        163,
+        149
+      ]
+    }
+  ]
+}

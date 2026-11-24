@@ -1,0 +1,20 @@
+{
+  "fruit": "avocado",
+  "ticks": 1136,
+  "time_s": 0.005679999999999853,
+  "dt_s": 5e-06,
+  "soft_particles": 49379,
+  "maximum_soft_displacement_m": 0.0032660159560296024,
+  "soft_knife_accumulated_impulse_Ns": 0.5606158714823268,
+  "pit_contact": true,
+  "pit_contact_seen": true,
+  "pit_clearance_m": 3.0008209286073197e-05,
+  "minimum_pit_clearance_m": 3.0008209286073197e-05,
+  "cut_side_particles": [
+    765,
+    611
+  ],
+  "blade_travel_m": 0.02271374999999659,
+  "test": "centered straight stroke from surface until fixed pit",
+  "speed_m_s": 4.0
+}

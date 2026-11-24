@@ -1,0 +1,85 @@
+{
+  "units": "Horizontal separation in USD world X. Screen gaps are measured in the original 820 x 660 exterior image before any edit scaling.",
+  "fruits": {
+    "orange": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 46.78700864315033,
+      "min_screen_x_gap_px": 120.16736181519445,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 49.847330152988434
+    },
+    "cucumber": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 48.07955725118518,
+      "min_screen_x_gap_px": 81.88691627965119,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 50.0
+    },
+    "banana": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.08358272910118,
+      "min_screen_x_gap_px": 90.2627247166879,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 50.0
+    },
+    "apple": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.782558859924826,
+      "min_screen_x_gap_px": 122.48726504919841,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 49.97931718826294
+    },
+    "strawberry": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.15511575341225,
+      "min_screen_x_gap_px": 149.55828206048687,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 50.0
+    },
+    "avocado": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.54882678389549,
+      "min_screen_x_gap_px": 149.20894445419657,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 50.0
+    },
+    "peach": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.32671531552832,
+      "min_screen_x_gap_px": 152.7119453176482,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 49.91283565759659
+    },
+    "watermelon": {
+      "frames": 145,
+      "min_surface_x_gap_mm": 47.539274155133484,
+      "min_screen_x_gap_px": 79.89806550927938,
+      "exterior_size": [
+        820,
+        660
+      ],
+      "min_particle_and_rigid_guard_x_gap_mm": 50.0
+    }
+  }
+}

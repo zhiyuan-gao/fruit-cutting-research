@@ -1,0 +1,74 @@
+{
+  "apple": {
+    "stage": "reference",
+    "soft_particles": 112661,
+    "rigid_bodies": 5,
+    "mpm_arrays_sha256": "3568ad3486bc7ac1c776eddeb7dc22bf5705659e014c9e5a47b3369ed3810b86",
+    "textures": {
+      "textures/apple_skin.jpg": "c257e7da6c90e22fe304dfff94f1ef17cc8630fca79d39833ba60eb59518fb40"
+    }
+  },
+  "avocado": {
+    "stage": "ripe",
+    "soft_particles": 49379,
+    "rigid_bodies": 1,
+    "mpm_arrays_sha256": "402e62bf8483a4de57fa7644bc73a191f5b15996696d3c83aab725a01f341634",
+    "textures": {
+      "textures/Avocado01_A.png": "7031c9fa605587f52e2b9cf6d3126fa4012142637eebf0595a484a46d46658c6"
+    }
+  },
+  "banana": {
+    "stage": "green",
+    "soft_particles": 77684,
+    "rigid_bodies": 0,
+    "mpm_arrays_sha256": "9d95107d273ca00a23790d91b6e01f80b5526ae07231af264c0016c5602b0df2",
+    "textures": {
+      "textures/banana_diffuse.jpg": "c372db9bf0fbcf54b2f0c9f03c49943ccf24c30d47e186eb0e92e55375529995"
+    }
+  },
+  "cucumber": {
+    "stage": "reference",
+    "soft_particles": 114517,
+    "rigid_bodies": 0,
+    "mpm_arrays_sha256": "d69eb8af37591f9b2961116d43098a4cff8a6a46644d72974a4fb6a2ab4113be",
+    "textures": {
+      "textures/cucumber_skin.png": "757a17689b44769177a5a8e730592d572613788ad4e75499343c533f68016bd2"
+    }
+  },
+  "melon": {
+    "stage": "reference",
+    "soft_particles": 494161,
+    "rigid_bodies": 54,
+    "mpm_arrays_sha256": "be77921b4b953324bd2205452a7798af6a98ef5fc00e99e26b799827ae0c5409",
+    "textures": {
+      "textures/melon_skin.jpg": "a1d47f72364d59124dbdbcb50c4490f6c4f1b0c64bde0101de1e9160c0658375"
+    }
+  },
+  "orange": {
+    "stage": "reference",
+    "soft_particles": 125948,
+    "rigid_bodies": 0,
+    "mpm_arrays_sha256": "4b25b5b0a0e69dd3557193bb228bbb82aaf5329148a9a6e833981bf24d011b60",
+    "textures": {
+      "textures/orange_skin.jpg": "8f4babf6021e3f543084d8efa5456dcb601a1603e8f6b0df0a85d027ebc2570b"
+    }
+  },
+  "peach": {
+    "stage": "reference",
+    "soft_particles": 115678,
+    "rigid_bodies": 1,
+    "mpm_arrays_sha256": "743c0bda13e315d482438ab1a9802240ea4f809f195b1e02bed6c12376cc76f5",
+    "textures": {
+      "textures/peach_skin.JPG": "72f66198e499e49c4d2301ab9e7dc195d0d3bae0e896cd3f511413a4390c55d5"
+    }
+  },
+  "strawberry": {
+    "stage": "reference",
+    "soft_particles": 46939,
+    "rigid_bodies": 0,
+    "mpm_arrays_sha256": "352fd59bd2dadfb41f60b19f7f1c56472f84eab1d136689e6570de3ea18e3571",
+    "textures": {
+      "textures/strawberry_skin.jpg": "6c96a62f8a317cc715c59b8877492be0cca3754ccae4e1b9df057e0786481c26"
+    }
+  }
+}

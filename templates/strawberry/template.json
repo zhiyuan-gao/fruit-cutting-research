@@ -1,0 +1,126 @@
+{
+  "fruit": "strawberry",
+  "reference_base_sha256": "94377d12abbae9236be2160aa412a51d2098f79cc7d4f38ad3c42253d142d2f7",
+  "material_order": [
+    "Peel",
+    "Pulp",
+    "Pith"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.04,
+      0.04
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements."
+  },
+  "materials": {
+    "Peel": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1010,
+          1010
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.33,
+          0.39
+        ],
+        "basis": "1 mm/s tissue block mean ± SD proxy. Outer block spans Peel and Pulp; inner block approximates Pith.",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2020.110016"
+      },
+      "nu": {
+        "range": [
+          0.4,
+          0.4
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1010,
+          1010
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.33,
+          0.39
+        ],
+        "basis": "1 mm/s tissue block mean ± SD proxy. Outer block spans Peel and Pulp; inner block approximates Pith.",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2020.110016"
+      },
+      "nu": {
+        "range": [
+          0.4,
+          0.4
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      }
+    },
+    "Pith": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1010,
+          1010
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.39,
+          0.45
+        ],
+        "basis": "1 mm/s tissue block mean ± SD proxy. Outer block spans Peel and Pulp; inner block approximates Pith.",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2020.110016"
+      },
+      "nu": {
+        "range": [
+          0.4,
+          0.4
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/strawberry.json"
+      }
+    }
+  },
+  "stages": {
+    "reference": {
+      "texture": "original",
+      "materials": {},
+      "note": "One appearance class from the source asset. No maturity trend inferred."
+    }
+  }
+}

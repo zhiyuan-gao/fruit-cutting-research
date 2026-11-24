@@ -1,0 +1,142 @@
+{
+  "fruit": "melon",
+  "reference_base_sha256": "024dbd34d9f53874a31abe8ff6ec8c3780c0f7a66db17f41ce9ff4fb37440ecf",
+  "material_order": [
+    "Rind",
+    "Pulp",
+    "Seed",
+    "GreenRind"
+  ],
+  "geometry": {
+    "size_scale": [
+      0.94,
+      1.06
+    ],
+    "axis_scale": [
+      0.97,
+      1.03
+    ],
+    "taper": [
+      -0.035,
+      0.035
+    ],
+    "bend": [
+      -0.04,
+      0.04
+    ],
+    "inner_shift": [
+      -0.055,
+      0.055
+    ],
+    "inner_expansion": [
+      -0.065,
+      0.065
+    ],
+    "basis": "Design priors, fractions of the source half-extents. Not population measurements.",
+    "green_rind_depth_m": [
+      0.0016,
+      0.0025
+    ]
+  },
+  "materials": {
+    "Rind": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          980,
+          980
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.734,
+          1.07
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2007.10.007"
+      },
+      "nu": {
+        "range": [
+          0.34,
+          0.34
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      }
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          1050,
+          1050
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      },
+      "E_MPa": {
+        "range": [
+          0.44,
+          0.632
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2007.10.007"
+      },
+      "nu": {
+        "range": [
+          0.39,
+          0.39
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      }
+    },
+    "Seed": {
+      "mode": "dynamic_rigid",
+      "density_kg_m3": {
+        "range": [
+          1200,
+          1200
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      }
+    },
+    "GreenRind": {
+      "mode": "soft_mpm",
+      "density_kg_m3": {
+        "range": [
+          980,
+          980
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      },
+      "E_MPa": {
+        "range": [
+          4.404,
+          5.47
+        ],
+        "basis": "measured interval or mean ± one reported SD",
+        "source": "https://doi.org/10.1016/j.jfoodeng.2007.10.007"
+      },
+      "nu": {
+        "range": [
+          0.34,
+          0.34
+        ],
+        "basis": "uncalibrated original baseline",
+        "source": "../../assets/tissues/melon.json"
+      }
+    }
+  },
+  "stages": {
+    "reference": {
+      "texture": "original",
+      "materials": {},
+      "note": "One appearance class from the source asset. No maturity trend inferred."
+    }
+  }
+}
