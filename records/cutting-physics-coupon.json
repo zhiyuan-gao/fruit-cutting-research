@@ -1,0 +1,1637 @@
+{
+  "sample": "Synthetic clamped elastic coupon, seed-2026 cucumber Pulp properties. No robot measurements.",
+  "physical_setup": "Straight vertical translation, actual knife mesh, no gravity, no board, fixture released for manipulation.",
+  "algorithms": {
+    "reference": "Single-cut TLMPM, quadratic reference stencils, Eq. 8 compatibility, PIC/FLIP with grid velocity advection and one gradient update. No MUSL re-scatter or static-friction history. Particle sphere closest-point contact, predicted gap, kinetic Coulomb friction. Work-limited forward impulse at the edge.",
+    "native": "Pinned CulinaryCut elastic MLS-MPM control. Matched coupon and trajectory, Eulerian clamp nodes, default SDF contact, no separate damage or cut topology, no tip assistance or bulk damping."
+  },
+  "cases": {
+    "air": {
+      "case": "air",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.0,
+      "My_at_Fz_peak_Nm": 0.0,
+      "downstroke_work_mJ": 0.0,
+      "cycle_work_mJ": 0.0,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9999979734420776,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 5.176226449915485e-14,
+      "unallocated_cycle_work_mJ": -7.145445259787442e-10,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 4.355674013197191e-05,
+      "steps": 1600,
+      "phase_end_steps": {
+        "down": 800,
+        "withdrawn": 1600
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "indent": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.5183277935429942,
+      "My_at_Fz_peak_Nm": 0.05178700536134784,
+      "downstroke_work_mJ": 0.17710261649634373,
+      "cycle_work_mJ": 0.056256631504456554,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9866458177566528,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.3563808964442993e-11,
+      "unallocated_cycle_work_mJ": 0.05625486249263064,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.11870128416751145,
+      "steps": 16800,
+      "phase_end_steps": {
+        "down": 8400,
+        "withdrawn": 16800
+      },
+      "reintegration_samples": 64,
+      "nonzero_point_impulses": 228,
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "mirror": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        -0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.5183841474263318,
+      "My_at_Fz_peak_Nm": -0.051884210762409566,
+      "downstroke_work_mJ": 0.17714248518115994,
+      "cycle_work_mJ": 0.05626644621390309,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.986640214920044,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 2.4013100641559172e-11,
+      "unallocated_cycle_work_mJ": 0.05626469115902388,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.11871472339004505,
+      "steps": 16800,
+      "phase_end_steps": {
+        "down": 8400,
+        "withdrawn": 16800
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "half": {
+      "case": "half",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.2361318386192579,
+      "My_at_Fz_peak_Nm": 0.02358223893139666,
+      "downstroke_work_mJ": 0.26178163412928684,
+      "cycle_work_mJ": 0.13124158062629718,
+      "cumulative_gate_work_mJ": 0.00031021578195122856,
+      "threshold_reached": 0,
+      "min_J": 0.9689987897872925,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 4.398779903992423e-11,
+      "unallocated_cycle_work_mJ": 0.1278330837033674,
+      "particles_by_side_down": [
+        216,
+        108,
+        108
+      ],
+      "max_down_displacement_mm": 0.26982275384480464,
+      "steps": 32000,
+      "phase_end_steps": {
+        "down": 16000,
+        "withdrawn": 32000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "full80": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.118800846143131,
+      "My_at_Fz_peak_Nm": 0.1117431698389737,
+      "downstroke_work_mJ": 2.8089619442566827,
+      "cycle_work_mJ": 1.2454102705439603,
+      "cumulative_gate_work_mJ": 0.00030825844632431654,
+      "threshold_reached": 0,
+      "min_J": 0.9242166876792908,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.8147875962866416e-10,
+      "unallocated_cycle_work_mJ": 1.243162080586206,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6563949671591217,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "repeat": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.118790545660886,
+      "My_at_Fz_peak_Nm": 0.11174210186482014,
+      "downstroke_work_mJ": 2.808851543377983,
+      "cycle_work_mJ": 1.245360952858515,
+      "cumulative_gate_work_mJ": 0.0003045232261911224,
+      "threshold_reached": 0,
+      "min_J": 0.9242311716079712,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 9.748447334256263e-11,
+      "unallocated_cycle_work_mJ": 1.2431146667005453,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6563951865598738,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "full40": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 40.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.1188231337655452,
+      "My_at_Fz_peak_Nm": 0.11174543470815479,
+      "downstroke_work_mJ": 2.809056310259212,
+      "cycle_work_mJ": 1.2454579248175703,
+      "cumulative_gate_work_mJ": 0.00030900502245856387,
+      "threshold_reached": 0,
+      "min_J": 0.9242243766784668,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 7.64126913801535e-11,
+      "unallocated_cycle_work_mJ": 1.2432106882376373,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6564106310248643,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "full160": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 160.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.118820787723962,
+      "My_at_Fz_peak_Nm": 0.11174515691436682,
+      "downstroke_work_mJ": 2.809035442840107,
+      "cycle_work_mJ": 1.24544830759218,
+      "cumulative_gate_work_mJ": 0.0003088324245226204,
+      "threshold_reached": 0,
+      "min_J": 0.9242171049118042,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 2.8448931058452857e-10,
+      "unallocated_cycle_work_mJ": 1.2432002426899473,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6564097445119326,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fast40": {
+      "case": "full",
+      "speed_m_s": 0.1,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 40.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.1186998003722692,
+      "My_at_Fz_peak_Nm": 0.11173263322916682,
+      "downstroke_work_mJ": 2.8269044900290416,
+      "cycle_work_mJ": 1.254943779542701,
+      "cumulative_gate_work_mJ": 0.0003574402729356052,
+      "threshold_reached": 0,
+      "min_J": 0.923828125,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 4.820041328746308e-10,
+      "unallocated_cycle_work_mJ": 1.2530273998548735,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6568170853569975,
+      "steps": 32000,
+      "phase_end_steps": {
+        "down": 16000,
+        "withdrawn": 32000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fast80": {
+      "case": "full",
+      "speed_m_s": 0.1,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.1187317209078174,
+      "My_at_Fz_peak_Nm": 0.11173568566391623,
+      "downstroke_work_mJ": 2.8270200594237833,
+      "cycle_work_mJ": 1.2549924634967666,
+      "cumulative_gate_work_mJ": 0.0003590389034968666,
+      "threshold_reached": 0,
+      "min_J": 0.9238226413726807,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 2.816551283171461e-10,
+      "unallocated_cycle_work_mJ": 1.2530752241090723,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6568186129538819,
+      "steps": 32000,
+      "phase_end_steps": {
+        "down": 16000,
+        "withdrawn": 32000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fast160": {
+      "case": "full",
+      "speed_m_s": 0.1,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 160.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.1187195000275096,
+      "My_at_Fz_peak_Nm": 0.11173446176826474,
+      "downstroke_work_mJ": 2.826979247613222,
+      "cycle_work_mJ": 1.2549762812638852,
+      "cumulative_gate_work_mJ": 0.00035790338159813473,
+      "threshold_reached": 0,
+      "min_J": 0.923825204372406,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 3.7497924169401767e-10,
+      "unallocated_cycle_work_mJ": 1.2530593060844017,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6568166562112587,
+      "steps": 32000,
+      "phase_end_steps": {
+        "down": 16000,
+        "withdrawn": 32000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "offset40": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 40.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0005,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 3.262875816290034,
+      "My_at_Fz_peak_Nm": 0.3260463672631886,
+      "downstroke_work_mJ": 8.024021736696296,
+      "cycle_work_mJ": 5.119173503645148,
+      "cumulative_gate_work_mJ": 1.439999308786355,
+      "threshold_reached": 36,
+      "min_J": 0.8757267594337463,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.1568987253922546e-08,
+      "unallocated_cycle_work_mJ": 4.907876711386639,
+      "particles_by_side_down": [
+        0,
+        252,
+        180
+      ],
+      "max_down_displacement_mm": 1.4451843573454608,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.5
+    },
+    "offset80": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0005,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 3.2872278106879094,
+      "My_at_Fz_peak_Nm": 0.32850592708655313,
+      "downstroke_work_mJ": 8.398445053307574,
+      "cycle_work_mJ": 5.632434072582852,
+      "cumulative_gate_work_mJ": 2.70693233323982,
+      "threshold_reached": 28,
+      "min_J": 0.8761276006698608,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 5.188952223714374e-10,
+      "unallocated_cycle_work_mJ": 5.385504514821674,
+      "particles_by_side_down": [
+        0,
+        252,
+        180
+      ],
+      "max_down_displacement_mm": 1.5826852808735254,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.5
+    },
+    "offset160": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 160.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0005,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 3.329015589770279,
+      "My_at_Fz_peak_Nm": 0.3326761205926232,
+      "downstroke_work_mJ": 8.273400730660407,
+      "cycle_work_mJ": 5.657874173688696,
+      "cumulative_gate_work_mJ": 4.0687025466468185,
+      "threshold_reached": 13,
+      "min_J": 0.8714449405670166,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 8.123371018338075e-10,
+      "unallocated_cycle_work_mJ": 5.350552567019121,
+      "particles_by_side_down": [
+        0,
+        252,
+        180
+      ],
+      "max_down_displacement_mm": 1.7589644953381118,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.5
+    },
+    "fine_dt": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.153376089177982,
+      "My_at_Fz_peak_Nm": 0.11519316041130878,
+      "downstroke_work_mJ": 2.8923292793120727,
+      "cycle_work_mJ": 1.2839945809733218,
+      "cumulative_gate_work_mJ": 0.00032813718320312546,
+      "threshold_reached": 0,
+      "min_J": 0.919241189956665,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 5.787670631911225e-10,
+      "unallocated_cycle_work_mJ": 1.2819217820665836,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6770736400620497,
+      "steps": 128000,
+      "phase_end_steps": {
+        "down": 64000,
+        "withdrawn": 128000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "indent-halfdt": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.8896583576643025,
+      "My_at_Fz_peak_Nm": 0.08888700915576919,
+      "downstroke_work_mJ": 0.3045169633099026,
+      "cycle_work_mJ": 0.0719176109064293,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9757275581359863,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.685136860466387e-11,
+      "unallocated_cycle_work_mJ": 0.07191306653710401,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.19847410755414385,
+      "steps": 33600,
+      "phase_end_steps": {
+        "down": 16800,
+        "withdrawn": 33600
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fixed-k-full": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.0625,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 1.122176795888663,
+      "My_at_Fz_peak_Nm": 0.11207920633182766,
+      "downstroke_work_mJ": 2.8123585466468426,
+      "cycle_work_mJ": 1.2451426695404224,
+      "cumulative_gate_work_mJ": 0.0003074495271704336,
+      "threshold_reached": 0,
+      "min_J": 0.9238609671592712,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.5570492669791054e-10,
+      "unallocated_cycle_work_mJ": 1.242931807291592,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 0.6568492034379027,
+      "steps": 128000,
+      "phase_end_steps": {
+        "down": 64000,
+        "withdrawn": 128000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fixed-k-indent": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.0625,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.5554748582881075,
+      "My_at_Fz_peak_Nm": 0.055497316353125825,
+      "downstroke_work_mJ": 0.183995504474025,
+      "cycle_work_mJ": 0.06408366237960686,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9866603016853333,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 4.930405301826157e-12,
+      "unallocated_cycle_work_mJ": 0.06407914033775478,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.13001030662676116,
+      "steps": 33600,
+      "phase_end_steps": {
+        "down": 16800,
+        "withdrawn": 33600
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "fine_space": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.0005,
+      "grid_spacing_m": 0.001,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 3456,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.00025,
+      "peak_window_Fz_N": 0.7604331935908704,
+      "My_at_Fz_peak_Nm": 0.07598068792447066,
+      "downstroke_work_mJ": 0.31498309725247065,
+      "cycle_work_mJ": 0.0517742944932619,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9649805426597595,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.8544911744246697e-10,
+      "unallocated_cycle_work_mJ": 0.05177114252746243,
+      "particles_by_side_down": [
+        3456,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.16638317593908522,
+      "steps": 33600,
+      "phase_end_steps": {
+        "down": 16800,
+        "withdrawn": 33600
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "refine-full": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.0005,
+      "grid_spacing_m": 0.001,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 3456,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.00025,
+      "peak_window_Fz_N": 1.378110346649919,
+      "My_at_Fz_peak_Nm": 0.13762892550062134,
+      "downstroke_work_mJ": 3.466063934505512,
+      "cycle_work_mJ": 1.5287737454709907,
+      "cumulative_gate_work_mJ": 7.635794774252247e-05,
+      "threshold_reached": 0,
+      "min_J": 0.9004586338996887,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.2632809891447411e-08,
+      "unallocated_cycle_work_mJ": 1.5262814066627663,
+      "particles_by_side_down": [
+        0,
+        1728,
+        1728
+      ],
+      "max_down_displacement_mm": 0.6994666981584177,
+      "steps": 128000,
+      "phase_end_steps": {
+        "down": 64000,
+        "withdrawn": 128000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "refine-offset": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 2.5e-06,
+      "spacing_m": 0.0005,
+      "grid_spacing_m": 0.001,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 3456,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.00025,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0003999200106655776,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.00025,
+      "peak_window_Fz_N": 1.3778021618691128,
+      "My_at_Fz_peak_Nm": 0.13765550588118458,
+      "downstroke_work_mJ": 5.511464522238486,
+      "cycle_work_mJ": 3.1330978307298327,
+      "cumulative_gate_work_mJ": 1.7679245770523266,
+      "threshold_reached": 26,
+      "min_J": 0.8765928149223328,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 3.6740558905068294e-09,
+      "unallocated_cycle_work_mJ": 3.086177290103672,
+      "particles_by_side_down": [
+        144,
+        1728,
+        1584
+      ],
+      "max_down_displacement_mm": 0.946436694964807,
+      "steps": 128000,
+      "phase_end_steps": {
+        "down": 64000,
+        "withdrawn": 128000
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.25
+    },
+    "stagger": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 4.882966859440785,
+      "My_at_Fz_peak_Nm": 0.4882129269390134,
+      "downstroke_work_mJ": 12.924997590671106,
+      "cycle_work_mJ": 10.04835852228086,
+      "cumulative_gate_work_mJ": 2.653291630849708,
+      "threshold_reached": 29,
+      "min_J": 0.8069997429847717,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 6.832238095492845e-10,
+      "unallocated_cycle_work_mJ": 9.295489052701551,
+      "particles_by_side_down": [
+        0,
+        216,
+        216
+      ],
+      "max_down_displacement_mm": 1.7051207789581533,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": true,
+      "lateral_mm": 0.0
+    },
+    "stagger-offset": {
+      "case": "full",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.03,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0005,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 5.125229312398005,
+      "My_at_Fz_peak_Nm": 0.5122691441101779,
+      "downstroke_work_mJ": 12.381347877990972,
+      "cycle_work_mJ": 9.55851715973997,
+      "cumulative_gate_work_mJ": 2.7634125162876444,
+      "threshold_reached": 31,
+      "min_J": 0.8222529292106628,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 5.940030942208096e-10,
+      "unallocated_cycle_work_mJ": 8.795312221473544,
+      "particles_by_side_down": [
+        0,
+        234,
+        198
+      ],
+      "max_down_displacement_mm": 1.766479918555248,
+      "steps": 64000,
+      "phase_end_steps": {
+        "down": 32000,
+        "withdrawn": 64000
+      },
+      "sample_staggered": true,
+      "lateral_mm": 0.5
+    },
+    "no_friction": {
+      "case": "indent",
+      "speed_m_s": 0.05,
+      "dt_s": 5e-06,
+      "spacing_m": 0.001,
+      "grid_spacing_m": 0.002,
+      "keff_J_m2": 80.0,
+      "knife_friction": 0.0,
+      "material": {
+        "mode": "soft_mpm",
+        "density_kg_m3": 965.8057479783803,
+        "E_MPa": 1.6423175876085674,
+        "nu": 0.3490658209544148
+      },
+      "particles": 432,
+      "sample_size_m": [
+        0.006,
+        0.012,
+        0.006
+      ],
+      "wrist_local_m": [
+        0.1,
+        0.0,
+        0.03
+      ],
+      "anchor_abs_y_m": 0.005,
+      "gravity_m_s2": 0.0,
+      "elastic_only": true,
+      "pic_blend_per_step": 0.0007996800853162789,
+      "normal_impulse_scale": 0.25,
+      "face_friction": 0.2,
+      "radius_m": 0.0005,
+      "peak_window_Fz_N": 0.4549839268292999,
+      "My_at_Fz_peak_Nm": 0.04545017496582204,
+      "downstroke_work_mJ": 0.1494542581214509,
+      "cycle_work_mJ": 0.0035202866392055557,
+      "cumulative_gate_work_mJ": 0.0,
+      "threshold_reached": 0,
+      "min_J": 0.9864686727523804,
+      "segment_entries": 0,
+      "max_inside_particles": 0,
+      "inside_particle_steps": 0,
+      "max_momentum_error_Ns": 1.5532671616421087e-11,
+      "unallocated_cycle_work_mJ": 0.0035191419277688044,
+      "particles_by_side_down": [
+        432,
+        0,
+        0
+      ],
+      "max_down_displacement_mm": 0.09983739882843086,
+      "steps": 16800,
+      "phase_end_steps": {
+        "down": 8400,
+        "withdrawn": 16800
+      },
+      "sample_staggered": false,
+      "lateral_mm": 0.0
+    },
+    "native-indent": {
+      "case": "indent",
+      "backend": "CulinaryCut MLS-MPM, fixed end grid nodes",
+      "particles": 432,
+      "dt_s": 5e-06,
+      "speed_m_s": 0.05,
+      "segment_entries": 0,
+      "inside_particle_steps": 0,
+      "max_inside_particles": 0,
+      "peak_window_Fz_N": 0.0,
+      "downstroke_work_mJ": -0.0,
+      "max_position_correction_mm": 0.0
+    },
+    "native-full": {
+      "case": "full",
+      "backend": "CulinaryCut MLS-MPM, fixed end grid nodes",
+      "particles": 432,
+      "dt_s": 5e-06,
+      "speed_m_s": 0.05,
+      "segment_entries": 24,
+      "inside_particle_steps": 203275,
+      "max_inside_particles": 24,
+      "peak_window_Fz_N": 0.004881870649953157,
+      "downstroke_work_mJ": 0.00439506952352028,
+      "max_position_correction_mm": 0.0
+    }
+  },
+  "manipulation": {
+    "half": {
+      "unloaded": [
+        {
+          "phase": "out",
+          "left_dy_mm": -0.014567428479494993,
+          "right_dy_mm": 0.014585820281354245,
+          "upper_gap_mm": 1.0638631647452712,
+          "lower_gap_mm": 0.9995399741455913,
+          "pair_normal_impulse_Ns": 2.7124549933921216e-07,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "back",
+          "left_dy_mm": -0.013060779565421399,
+          "right_dy_mm": 0.013106271580909379,
+          "upper_gap_mm": 1.058350084349513,
+          "lower_gap_mm": 0.9997249580919743,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "reopen",
+          "left_dy_mm": -0.012608479664777406,
+          "right_dy_mm": 0.012538109331217129,
+          "upper_gap_mm": 1.0561759117990732,
+          "lower_gap_mm": 0.9998104069381952,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        }
+      ],
+      "loaded": [
+        {
+          "phase": "out",
+          "left_dy_mm": 0.5610391381196678,
+          "right_dy_mm": 0.5914804060012102,
+          "upper_gap_mm": 1.0662070708349347,
+          "lower_gap_mm": 0.9995689615607262,
+          "pair_normal_impulse_Ns": 2.458521610737563e-07,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "back",
+          "left_dy_mm": -0.7966194534674287,
+          "right_dy_mm": -0.771952560171485,
+          "upper_gap_mm": 1.0556163033470511,
+          "lower_gap_mm": 0.9998076129704714,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "reopen",
+          "left_dy_mm": 3.433210076764226,
+          "right_dy_mm": 3.4606915432959795,
+          "upper_gap_mm": 1.0606285650283098,
+          "lower_gap_mm": 0.9997066808864474,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        }
+      ],
+      "components": 1,
+      "clamp_and_gravity_enabled": false,
+      "right_external_force_N": 0.0033378246650132824,
+      "delta_out_mm": {
+        "left": 0.5756065665991628,
+        "right": 0.576894585719856
+      }
+    },
+    "full80": {
+      "unloaded": [
+        {
+          "phase": "out",
+          "left_dy_mm": -0.011821555744973011,
+          "right_dy_mm": 0.011827672096842434,
+          "upper_gap_mm": 1.0467683896422386,
+          "lower_gap_mm": 1.025297911837697,
+          "pair_normal_impulse_Ns": 5.772203007584076e-07,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "back",
+          "left_dy_mm": -0.10610233584884554,
+          "right_dy_mm": 0.1061325310729444,
+          "upper_gap_mm": 1.2909616343677044,
+          "lower_gap_mm": 1.155779347755015,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "reopen",
+          "left_dy_mm": -0.2309094270458445,
+          "right_dy_mm": 0.23094264906831086,
+          "upper_gap_mm": 1.5477142296731472,
+          "lower_gap_mm": 1.3985394034534693,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        }
+      ],
+      "loaded": [
+        {
+          "phase": "out",
+          "left_dy_mm": -6.927614748519773e-05,
+          "right_dy_mm": 1.1525771114975214,
+          "upper_gap_mm": 2.1797819063067436,
+          "lower_gap_mm": 2.149678533896804,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "back",
+          "left_dy_mm": -0.9224128443747759,
+          "right_dy_mm": -0.6461956072598696,
+          "upper_gap_mm": 1.2597087770700455,
+          "lower_gap_mm": 1.321854768320918,
+          "pair_normal_impulse_Ns": 4.0681787737362196e-05,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        },
+        {
+          "phase": "reopen",
+          "left_dy_mm": -9.699652902781963,
+          "right_dy_mm": 16.593482345342636,
+          "upper_gap_mm": 27.37170271575451,
+          "lower_gap_mm": 27.236538007855415,
+          "pair_normal_impulse_Ns": 0.0,
+          "end_pair_impulse_Ns": 0.0,
+          "tool_impulse_Ns": 0.0,
+          "stable_side": true
+        }
+      ],
+      "already_open_push": {
+        "left_extra_mm": -1.6896389842813164e-07,
+        "right_extra_mm": 0.2882398257497698,
+        "normal_contact_Ns": [
+          0.0,
+          0.0
+        ]
+      },
+      "components": 2,
+      "clamp_and_gravity_enabled": false,
+      "right_external_force_N": 0.0033378246650132824,
+      "delta_out_mm": {
+        "left": 0.011752279597487814,
+        "right": 1.140749439400679
+      }
+    }
+  },
+  "archive_control": {
+    "particle": 71186,
+    "frames": [
+      4,
+      5,
+      6
+    ],
+    "entries": [
+      1,
+      0
+    ],
+    "inside_at_end": [
+      1,
+      0
+    ],
+    "motion": "linear interpolation of archived frames"
+  },
+  "checks": {
+    "archive_positive_control": true,
+    "no_load": true,
+    "eccentric_torque_sign": true,
+    "contact_point_reintegration": true,
+    "no_observed_coupon_center_entry": true,
+    "positive_volume": true,
+    "partial_connected": true,
+    "through_disconnected": true,
+    "clear_push_no_drag": true,
+    "recontact_and_release": true,
+    "stable_ids": true
+  },
+  "max_abs_window_integration_error_Ns_or_Nms": 7.771561172376096e-16,
+  "center_case_energy_mJ": {
+    "tool_work": 1.2454102705439603,
+    "final_kinetic_plus_strain": 0.002248189957754221,
+    "sliding_work_estimate": 1.1915334505268544,
+    "balance_after_sliding_estimate": 0.05162863005935166,
+    "directional_gate_work_diagnostic": 0.00030825844632431654
+  },
+  "interpretation": "Directional work is not debited a second time. Sliding work uses pre-impulse relative velocity; remaining work includes numerical dissipation and contact errors. Position and sampling sensitivity preclude identifying K_eff from this coupon."
+}

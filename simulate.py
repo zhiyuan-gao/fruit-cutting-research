@@ -20,7 +20,7 @@ from adapter import TO_WORLD as AXES
 
 TO_WORLD = AXES.astype(float)
 from fracture import SweptFracture, load_fracture_core
-from rigid_knife import RigidKnifeCollider, RigidKnifeControl
+from rigid_knife import RegisteredBoardKnifeCollider, RigidKnifeCollider, RigidKnifeControl
 from rigid_pit import RigidPit
 from seed_contact import SeedContact
 
@@ -28,6 +28,31 @@ from seed_contact import SeedContact
 def pack(name):
     with np.load(ROOT / ".cache/tools" / f"{name}.npz") as f:
         return dict(f)
+
+
+def slotted_board(pack, center_y):
+    """Two support blocks separated in USD Y. Sample their union on the native SDF grid."""
+    top, bottom, half_gap = .031, .005, .012
+    limits = [(-.18, center_y - half_gap), (center_y + half_gap, .18)]
+    if not np.isfinite(center_y) or min(hi - lo for lo, hi in limits) <= 0:
+        raise ValueError("Support slot lies outside the board")
+    boxes = []
+    voxel = float(pack["voxel_size"])
+    z, y, x = np.ogrid[tuple(slice(n) for n in pack["sdf"].shape)]
+    origin = pack["origin"]
+    grid = [origin[0] + x*voxel, -(origin[2] + z*voxel), origin[1] + y*voxel]
+    distance = np.full(pack["sdf"].shape, np.inf, np.float32)
+    for lo, hi in limits:
+        center = [0., (lo + hi)/2, (bottom + top)/2]
+        size = [.30, hi - lo, top - bottom]
+        boxes.append((center, size))
+        dx, dy, dz = [np.abs(axis - c) - width/2 for axis, c, width in zip(grid, center, size)]
+        outside = np.sqrt(np.maximum(dx, 0)**2 + np.maximum(dy, 0)**2 + np.maximum(dz, 0)**2)
+        sdf = outside + np.minimum(np.maximum(np.maximum(dx, dy), dz), 0)
+        np.minimum(distance, sdf, out=distance)
+    pack["sdf"] = distance
+    pack["render_offset_y"] = 0.
+    return boxes
 
 
 class MovingSeeds:
@@ -130,20 +155,27 @@ class MovingSeeds:
 class FruitSimulation:
     """One active CUDA session per process. Knife positions and seed state use USD metres, Z-up."""
 
-    def __init__(self, folder, fracture=True):
+    def __init__(self, folder, fracture=True, *, track_pieces=False, velocity_decay_per_s=None, slot_center_y=None):
         folder = Path(folder)
         self.record = json.loads((folder / "sample.json").read_text())
+        if track_pieces and (not fracture or self.record["rigid_bodies"]):
+            raise ValueError("Single-cut piece tracking requires fracture and an all-soft sample")
+        self.pieces = None
         self.temp = tempfile.TemporaryDirectory()
         import mpmcore.sim as native
 
         core = load_fracture_core(self.temp.name) if fracture else native
         ti.init(arch=ti.cuda, enable_fallback=False, random_seed=self.record["seed"] % (2**31))
         core._TI_INIT = True
-        core.KnifeCollider = RigidKnifeCollider
+        core.KnifeCollider = RegisteredBoardKnifeCollider if track_pieces else RigidKnifeCollider
         record = self.record
         names = record["material_order"]
         mats = record["materials"]
         cfg = yaml.safe_load((ROOT / "configs/simulation.yaml").read_text())
+        if velocity_decay_per_s is not None:
+            if not fracture or not np.isfinite(velocity_decay_per_s) or velocity_decay_per_s < 0:
+                raise ValueError("Velocity decay requires fracture mode and a finite nonnegative rate")
+            cfg["cutting_mesh"]["velocity_decay_per_s"] = float(velocity_decay_per_s)
         cfg["knife"]["mesh_path"] = str(UPSTREAM / "assets/knife.obj")
         dx = 0.5 / cfg["world"]["grid_resolution"]
         for mat in mats.values():
@@ -165,6 +197,11 @@ class FruitSimulation:
         board["render_offset_y"] = (
             1.15 * dx - board["origin"][1] - (ys.min() + 0.5) * float(board["voxel_size"])
         )
+        self.support_boxes = None
+        if slot_center_y is not None:
+            if not track_pieces:
+                raise ValueError("The slotted support requires registered-board piece tracking")
+            self.support_boxes = slotted_board(board, slot_center_y)
         sim = self.sim = core.MPMCuttingSim(cfg, None, blade, board, viewer=False)
         self.seeds = None
         with np.load(folder / "mpm.npz") as data:
@@ -225,7 +262,11 @@ class FruitSimulation:
                 dynamic.append(vertices)
                 masses.append(item["volume_m3"] * mats[item["material"]]["density_kg_m3"])
         if fracture:
-            sim.fracture = SweptFracture(sim)
+            sim.fracture = SweptFracture(sim, self.knife_mesh if track_pieces else None, self.grip_guard_x)
+        if track_pieces:
+            from pieces import SingleCutPieces
+
+            self.pieces = SingleCutPieces(self.rest_usd, spacing)
         self.quat = np.array([2**-0.5, 2**-0.5, 0.0, 0.0])
         self.control = RigidKnifeControl(sim, dict(position=initial, quaternion=self.quat))
         if dynamic:
@@ -258,6 +299,25 @@ class FruitSimulation:
             self.tool_contact += np.linalg.norm(self.sim.knife_impulse_g[None])
             self.frame += 1
 
+    def set_piece_force(self, piece_id, force):
+        """Replace the held external load with a total force in world N on one piece, distributed by mass."""
+        if self.pieces is None:
+            raise ValueError("Enable track_pieces to apply a piece load")
+        ids = self.pieces.update(self.sim.fracture.side.to_numpy())
+        members = np.flatnonzero(ids == piece_id)
+        if not len(members):
+            raise ValueError(f"Piece {piece_id} is not present at this simulation time")
+        force = np.asarray(force, dtype=float)
+        if force.shape != (3,) or not np.isfinite(force).all():
+            raise ValueError("Expected a finite world-space force vector in N")
+        if np.any(force):
+            mass = self.sim.particles.mass.to_numpy()[members].astype(float)
+            loads = np.zeros((len(ids), 3), dtype=np.float32)
+            loads[members] = (mass / mass.sum())[:, None] * force
+            self.control.set_forces(loads)
+        else:
+            self.control.set_forces(None)
+
     def state(self):
         """MPM positions/velocities and rest-to-current transforms for each USD rigid prim."""
         rigid = {}
@@ -274,7 +334,7 @@ class FruitSimulation:
         for b in self.record["rigid_bodies"]:
             if b["mode"] == "fixed_rigid":
                 rigid[b["path"]] = np.eye(4)
-        return dict(
+        state = dict(
             time_s=self.sim.sim_time,
             positions=self.sim.particles.x.to_numpy() @ TO_WORLD.T,
             velocities=self.sim.particles.v.to_numpy() @ TO_WORLD.T,
@@ -283,6 +343,9 @@ class FruitSimulation:
             rigid_rest_to_world=rigid,
             knife=self.control.state(),
         )
+        if self.pieces is not None:
+            state["piece_ids"] = self.pieces.update(self.sim.fracture.side.to_numpy())
+        return state
 
     def summary(self):
         x = self.sim.particles.x.to_numpy() @ TO_WORLD.T
@@ -311,6 +374,9 @@ class FruitSimulation:
         if hasattr(self.sim, "fracture"):
             side = self.sim.fracture.side.to_numpy()
             result["cut_side_particles"] = [int((side == i).sum()) for i in (-1, 1)]
+            if self.pieces is not None:
+                ids, counts = np.unique(self.pieces.update(side), return_counts=True)
+                result["soft_piece_particle_counts"] = {int(i): int(n) for i, n in zip(ids, counts)}
         return result
 
     def close(self):
@@ -327,6 +393,7 @@ if __name__ == "__main__":
     )
     ap.add_argument("--speed", type=float, default=0.5, help="downward speed in metres per second")
     ap.add_argument("--report", type=Path)
+    ap.add_argument("--track-pieces", action="store_true", help="Track one cut through a connected all-soft sample; export piece nodes")
     ap.add_argument("--stage", type=Path, help="Save up to 121 sampled states as an Isaac-viewable .usdc stage")
     args = ap.parse_args()
     if (args.ticks is not None and args.ticks < 1) or not np.isfinite(args.speed) or args.speed < 0:
@@ -335,7 +402,7 @@ if __name__ == "__main__":
         ap.error("Specify --ticks for a stationary knife")
     if args.stage and args.stage.suffix != ".usdc":
         ap.error("--stage must end in .usdc")
-    env = FruitSimulation(args.sample)
+    env = FruitSimulation(args.sample, track_pieces=args.track_pieces)
     try:
         pos = env.control.position.copy()
         pos[2] = env.rest_usd[:, 2].max() - env.tip[2] + 0.0003

@@ -1,10 +1,22 @@
-# Fruit cutting with CulinaryCut and Isaac Sim
+# Fruit cutting physics for Isaac Sim
 
 Generate eight fruits with separate anatomical meshes and simulate their soft tissues with CulinaryCut MPM. The fruit templates link shape, internal anatomy and material parameters. The avocado and peach have fixed pits that stop the blade. Apple and watermelon seeds are individually movable rigid bodies.
 
 **[Watch the eight-fruit demo](demo/fruit-cutting-films.html)**. Download the HTML and open it in a browser. The file contains one 32.25-second, double-speed film with synchronized exterior and interior views.
 
 **[Download the eight USDZ models for Isaac Sim](https://github.com/zhiyuan-gao/fruit-cutting-research/releases/download/v0.1.0/fruit-models-usdz-v0.1.0.zip)**. Extract the ZIP and open any fruit's USDZ directly in Isaac Sim. All textures are embedded. These are the reference samples generated with seed 2026 and index 0.
+
+## Cutting physics experiments
+
+| Experiment | Watch | Inspect the measurements |
+| --- | --- | --- |
+| Whole cucumber, one cut. Withdraw the knife, push one piece, then bring the faces back into contact. | [Cut and recontact](https://github.com/zhiyuan-gao/fruit-cutting-research/releases/download/v0.2.0/cucumber-cut-and-recontact.mp4) | [Per-frame record](records/cucumber-piece-trial.json) · [Tracked particle crossing the blade](records/cut-alignment.png) · [Continuous collision check](records/cut-alignment-ccd.json) |
+| CRESSim-MPM. Give the right piece an outward velocity and compare with an unloaded run. On the native shared grid the right and left pieces moved an additional 8.93 and 8.59 mm. The separate-grid comparison reuses the passive trajectory and tests outward motion only. | [Side-by-side controls, Chinese captions](https://github.com/zhiyuan-gao/fruit-cutting-research/releases/download/v0.2.0/cressim-cucumber-results-zh.mp4) | [Displacements, solver revision and limitations](records/cressim-cucumber.json) · [Build and run](scripts/cressim_trial/README.md) |
+| Elastic cucumber-flesh coupon, 6 × 12 × 6 mm. Compare a partial and a through cut, apply a load to one side, then close and reopen the cut. | [Half cut and through cut](https://github.com/zhiyuan-gao/fruit-cutting-research/releases/download/v0.2.0/coupon-cuts.mp4) | [Result figure](records/coupon-results.png) · [26 numerical cases](records/cutting-physics-coupon.json) · [Six-axis wrench CSVs](records/coupon-wrench) |
+
+These simulations use prescribed knife motion. In the coupon, shifting the knife by 0.5 mm relative to the particle rows changed the downstroke work from 2.81 to 8.40 mJ at the same speed and resistance. This sensitivity remains an obstacle to estimating cutting resistance from real force data. Stress-driven cracking and robot calibration are planned. [Research plan and parameters (中文)](CUTTING_PHYSICS_PLAN.md) · [Research handoff (中文)](HANDOFF.md)
+
+Open any of the five USD time series in Isaac Sim and scrub the timeline to inspect recorded states. [Download the replays](https://github.com/zhiyuan-gao/fruit-cutting-research/releases/tag/v0.2.0)
 
 ## Reproduce the reference samples
 
@@ -39,6 +51,39 @@ Open `examples/<fruit>/2026_0000/fruit.usdz` in Isaac Sim to inspect the texture
 Open `outputs/orange.usdc` in Isaac Sim and scrub the timeline to see MPM particles grouped by tissue, the actual blade pose, and the rigid bodies for fruits that contain them. Each timeline frame represents one recorded state. The `mpm:simulationTime` attribute on `/World` gives physical time in seconds. Omit `--stage` to run just the simulation. The 4 m/s command reproduces the reference test speed. It is a numerical test setting.
 
 The default straight stroke places the grip beyond the fruit and stops at the board or a fixed pit. For custom control, construct `FruitSimulation` from a generated sample, use `command(position, velocity, quaternion, angular)` and advance with `step(ticks)`. `state()` returns soft particle positions, velocities, tissue IDs, segment IDs, the knife pose and the transforms of the rigid prims. Positions are in metres in USD Z-up coordinates. Quaternions use wxyz. `src/mpm_cutting` also contains the upstream solver adapter and its Isaac surface view.
+
+## Single-cut cucumber trial in Isaac Sim
+
+Run the numerical experiment on the reference cucumber and open its time-sampled stage in Isaac Sim.
+
+```sh
+./python.sh piece_trial.py examples/cucumber/2026_0000 --out outputs/cucumber-piece-trial
+./python.sh validate_isaac.py --cut outputs/cucumber-piece-trial/cucumber.usdc
+```
+
+The stage shows `/World/Fruit/Whole` during the partial cut. Once the material separates, `Piece_001` and `Piece_002` become visible under `/World/Fruit`. Each Xform follows its mass center and contains points grouped by tissue with stable particle IDs. Scrub the timeline and inspect `mpm:phase` and `mpm:simulationTime` on `/World`. The saved USD plays back computed MPM states. In a running Python simulation, `FruitSimulation(..., track_pieces=True)` exposes `state()["piece_ids"]`. After separation, `set_piece_force(piece_id, [fx, fy, fz])` applies a held total world-space force in N, distributed by particle mass. A zero vector releases the load.
+
+The trial uses one transverse stroke across a 24 mm slot between supports. It traces the lower edge of the registered knife mesh and samples the board in the board's own SDF coordinates. In the initial material configuration, neighbors within 1.25 particle spacings form a graph. Links whose endpoints have acquired opposite cut-side labels cease to connect the material. This detects a remaining bridge at the sampled resolution and preserves piece IDs when cut faces touch again. The graph is evaluated from the MPM cut history, independently of the display.
+
+The trial applies the same velocity decay of 300 per second throughout, then branches from the withdrawn state for a matched unloaded control. It measures each piece's axial displacement, compressive grid contacts and the signed axial separation of originally neighboring particles across the cut. The support, 4 m/s knife speed and distributed load are numerical test conditions. Validation covers a single cut on the reference cucumber. [Reference trial measurements](records/cucumber-piece-trial.json)
+
+## Reproduce the coupon measurements
+
+After preparing the reference samples above, run the following commands from the repository root. The full suite uses the original whole-cucumber recording as a positive control for the blade-crossing detector. The published recording is about 116 MiB.
+
+```sh
+./python.sh scripts/prepare_tools.py
+mkdir -p outputs/cucumber-piece-trial
+archive=outputs/cucumber-piece-trial/cucumber.usdc
+if [ ! -f "$archive" ]; then
+    curl -fL https://github.com/zhiyuan-gao/fruit-cutting-research/releases/download/v0.2.0/cucumber.usdc -o "$archive.part" && mv "$archive.part" "$archive"
+fi
+echo "4e141d2a76f088bc2651cb8e28f2cc06703fe203c6e224a62bdfa6336f00d97e  $archive" | sha256sum -c -
+./python.sh cut_physics_trial.py full --speed 0.05 --keff 80 --out outputs/cut-physics/full80
+scripts/cut_physics/run_trials.sh
+```
+
+The single-run command writes the centered cut's force, torque and energy traces. The suite runs the sampling and timestep comparisons, the native CulinaryCut controls, and the cut-piece manipulation tests. It also regenerates the report, figure and coupon USD replay. To compare the published curves directly, use `full80.csv` (centered), `offset80.csv` (0.5 mm lateral shift) and `native-full.csv` (centered CulinaryCut control). All three use 0.05 m/s. The two reference-grid runs use a fixed effective cutting resistance of 80 J/m². Each CSV row ends one averaging window. Times are seconds, depth is millimetres, and the three force and three moment columns give world-frame knife reactions in N and N·m about the wrist reference point. [Published traces](records/coupon-wrench) · [Solver and trial settings](cut_physics_trial.py)
 
 ## Model contents
 

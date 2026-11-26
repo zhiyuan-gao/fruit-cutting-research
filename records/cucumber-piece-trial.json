@@ -1,0 +1,959 @@
+{
+  "fruit": "cucumber",
+  "seed": 2026,
+  "index": 0,
+  "particles": 114517,
+  "mass_kg": 0.7929321849310327,
+  "spacing_m": 0.002,
+  "dt_s": 5e-06,
+  "knife_speed_m_s": 4.0,
+  "velocity_decay_per_s": 300.0,
+  "frames": [
+    {
+      "frame": 0,
+      "phase": "intact",
+      "time_s": 0.0,
+      "piece_count": 1,
+      "knife_z_m": 0.12369047342538833,
+      "compressive_nodes": 0
+    },
+    {
+      "frame": 1,
+      "phase": "partial_cut",
+      "time_s": 0.0017750000000000042,
+      "piece_count": 1,
+      "knife_z_m": 0.11659047342538831,
+      "compressive_nodes": 0
+    },
+    {
+      "frame": 2,
+      "phase": "partial_cut",
+      "time_s": 0.0035499999999999395,
+      "piece_count": 1,
+      "knife_z_m": 0.10949047342538859,
+      "compressive_nodes": 0
+    },
+    {
+      "frame": 3,
+      "phase": "partial_cut",
+      "time_s": 0.005324999999999867,
+      "piece_count": 1,
+      "knife_z_m": 0.10239047342538887,
+      "compressive_nodes": 0
+    },
+    {
+      "frame": 4,
+      "phase": "partial_cut",
+      "time_s": 0.007099999999999795,
+      "piece_count": 1,
+      "knife_z_m": 0.09529047342538915,
+      "compressive_nodes": 6
+    },
+    {
+      "frame": 5,
+      "phase": "partial_cut",
+      "time_s": 0.008874999999999723,
+      "piece_count": 1,
+      "knife_z_m": 0.08819047342538944,
+      "compressive_nodes": 28
+    },
+    {
+      "frame": 6,
+      "phase": "partial_cut",
+      "time_s": 0.010649999999999651,
+      "piece_count": 1,
+      "knife_z_m": 0.08109047342538972,
+      "compressive_nodes": 78
+    },
+    {
+      "frame": 7,
+      "phase": "partial_cut",
+      "time_s": 0.012424999999999579,
+      "piece_count": 1,
+      "knife_z_m": 0.07399047342539003,
+      "compressive_nodes": 143
+    },
+    {
+      "frame": 8,
+      "phase": "partial_cut",
+      "time_s": 0.014199999999999506,
+      "piece_count": 1,
+      "knife_z_m": 0.06689047342539031,
+      "compressive_nodes": 212
+    },
+    {
+      "frame": 9,
+      "phase": "finish_cut",
+      "time_s": 0.015144999999999468,
+      "piece_count": 1,
+      "knife_z_m": 0.06311047342539047,
+      "compressive_nodes": 252
+    },
+    {
+      "frame": 10,
+      "phase": "finish_cut",
+      "time_s": 0.016094999999999592,
+      "piece_count": 1,
+      "knife_z_m": 0.05931047342538997,
+      "compressive_nodes": 281
+    },
+    {
+      "frame": 11,
+      "phase": "finish_cut",
+      "time_s": 0.017044999999999883,
+      "piece_count": 1,
+      "knife_z_m": 0.055510473425388805,
+      "compressive_nodes": 312
+    },
+    {
+      "frame": 12,
+      "phase": "finish_cut",
+      "time_s": 0.017995000000000174,
+      "piece_count": 1,
+      "knife_z_m": 0.05171047342538764,
+      "compressive_nodes": 313
+    },
+    {
+      "frame": 13,
+      "phase": "finish_cut",
+      "time_s": 0.018945000000000465,
+      "piece_count": 1,
+      "knife_z_m": 0.04791047342538648,
+      "compressive_nodes": 368
+    },
+    {
+      "frame": 14,
+      "phase": "finish_cut",
+      "time_s": 0.019895000000000756,
+      "piece_count": 1,
+      "knife_z_m": 0.044110473425385315,
+      "compressive_nodes": 408
+    },
+    {
+      "frame": 15,
+      "phase": "finish_cut",
+      "time_s": 0.020840000000001045,
+      "piece_count": 1,
+      "knife_z_m": 0.04033047342538416,
+      "compressive_nodes": 419
+    },
+    {
+      "frame": 16,
+      "phase": "finish_cut",
+      "time_s": 0.021790000000001336,
+      "piece_count": 1,
+      "knife_z_m": 0.036530473425382994,
+      "compressive_nodes": 456
+    },
+    {
+      "frame": 17,
+      "phase": "finish_cut",
+      "time_s": 0.022740000000001627,
+      "piece_count": 1,
+      "knife_z_m": 0.03273047342538183,
+      "compressive_nodes": 509
+    },
+    {
+      "frame": 18,
+      "phase": "finish_cut",
+      "time_s": 0.023690000000001918,
+      "piece_count": 1,
+      "knife_z_m": 0.028930473425380666,
+      "compressive_nodes": 528
+    },
+    {
+      "frame": 19,
+      "phase": "finish_cut",
+      "time_s": 0.02464000000000221,
+      "piece_count": 2,
+      "knife_z_m": 0.025130473425379503,
+      "compressive_nodes": 621,
+      "passive_y_m": -0.08106435856162565,
+      "loaded_y_m": 0.06148846144921674,
+      "face_pair_y_p10_m": -3.618933260440826e-06
+    },
+    {
+      "frame": 20,
+      "phase": "finish_cut",
+      "time_s": 0.0255900000000025,
+      "piece_count": 2,
+      "knife_z_m": 0.02133047342537834,
+      "compressive_nodes": 501,
+      "passive_y_m": -0.0812982339987327,
+      "loaded_y_m": 0.06123421564030557,
+      "face_pair_y_p10_m": -3.658793866634368e-05
+    },
+    {
+      "frame": 21,
+      "phase": "withdraw",
+      "time_s": 0.028520000000003397,
+      "piece_count": 2,
+      "knife_z_m": 0.03305047342538193,
+      "compressive_nodes": 308,
+      "passive_y_m": -0.08169753986108474,
+      "loaded_y_m": 0.06081754272387962,
+      "face_pair_y_p10_m": -2.8903223574161525e-05
+    },
+    {
+      "frame": 22,
+      "phase": "withdraw",
+      "time_s": 0.03145500000000415,
+      "piece_count": 2,
+      "knife_z_m": 0.044790473425384954,
+      "compressive_nodes": 268,
+      "passive_y_m": -0.08183564949075653,
+      "loaded_y_m": 0.06072382485134338,
+      "face_pair_y_p10_m": -5.425699055194853e-06
+    },
+    {
+      "frame": 23,
+      "phase": "withdraw",
+      "time_s": 0.034390000000003015,
+      "piece_count": 2,
+      "knife_z_m": 0.0565304734253804,
+      "compressive_nodes": 171,
+      "passive_y_m": -0.08191817655599402,
+      "loaded_y_m": 0.06067672552633311,
+      "face_pair_y_p10_m": 3.083534538745884e-05
+    },
+    {
+      "frame": 24,
+      "phase": "withdraw",
+      "time_s": 0.03732500000000188,
+      "piece_count": 2,
+      "knife_z_m": 0.06827047342537584,
+      "compressive_nodes": 178,
+      "passive_y_m": -0.08195955957087793,
+      "loaded_y_m": 0.06065543265569971,
+      "face_pair_y_p10_m": 7.814802229404451e-05
+    },
+    {
+      "frame": 25,
+      "phase": "withdraw",
+      "time_s": 0.04026000000000074,
+      "piece_count": 2,
+      "knife_z_m": 0.08001047342537129,
+      "compressive_nodes": 148,
+      "passive_y_m": -0.08198844762360061,
+      "loaded_y_m": 0.06065142812586051,
+      "face_pair_y_p10_m": 8.977018296718599e-05
+    },
+    {
+      "frame": 26,
+      "phase": "withdraw",
+      "time_s": 0.0431949999999996,
+      "piece_count": 2,
+      "knife_z_m": 0.09175047342536674,
+      "compressive_nodes": 206,
+      "passive_y_m": -0.08202972864646904,
+      "loaded_y_m": 0.060661385272360445,
+      "face_pair_y_p10_m": 0.00011307764798402789
+    },
+    {
+      "frame": 27,
+      "phase": "withdraw",
+      "time_s": 0.046129999999998464,
+      "piece_count": 2,
+      "knife_z_m": 0.10349047342536219,
+      "compressive_nodes": 22,
+      "passive_y_m": -0.08202915417119773,
+      "loaded_y_m": 0.060814502111903306,
+      "face_pair_y_p10_m": 0.000504209753125906
+    },
+    {
+      "frame": 28,
+      "phase": "withdraw",
+      "time_s": 0.049064999999997326,
+      "piece_count": 2,
+      "knife_z_m": 0.11523047342535764,
+      "compressive_nodes": 324,
+      "passive_y_m": -0.08199823036649488,
+      "loaded_y_m": 0.060928447256027175,
+      "face_pair_y_p10_m": 0.000603858008980751
+    },
+    {
+      "frame": 29,
+      "phase": "withdraw",
+      "time_s": 0.05199999999999619,
+      "piece_count": 2,
+      "knife_z_m": 0.1269704734253531,
+      "compressive_nodes": 234,
+      "passive_y_m": -0.08192326160824198,
+      "loaded_y_m": 0.06098348680685343,
+      "face_pair_y_p10_m": 0.0006333342753350736
+    },
+    {
+      "frame": 30,
+      "phase": "withdraw",
+      "time_s": 0.05493499999999505,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 317,
+      "passive_y_m": -0.08184487371816193,
+      "loaded_y_m": 0.061018595959984503,
+      "face_pair_y_p10_m": 0.0006474435329437257
+    },
+    {
+      "frame": 31,
+      "phase": "withdrawn",
+      "time_s": 0.05493999999999505,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 312,
+      "passive_y_m": -0.08184450835161106,
+      "loaded_y_m": 0.06101864687045256,
+      "face_pair_y_p10_m": 0.0006474913097918034
+    },
+    {
+      "frame": 32,
+      "phase": "push_out",
+      "time_s": 0.057604999999994015,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 14,
+      "passive_y_m": -0.08170024157959109,
+      "loaded_y_m": 0.06150838205009928,
+      "face_pair_y_p10_m": 0.0009171159937977791
+    },
+    {
+      "frame": 33,
+      "phase": "push_out",
+      "time_s": 0.06026999999999298,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 20,
+      "passive_y_m": -0.08190136014344315,
+      "loaded_y_m": 0.06249633956065348,
+      "face_pair_y_p10_m": 0.001488799974322319
+    },
+    {
+      "frame": 34,
+      "phase": "push_out",
+      "time_s": 0.06293999999999256,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 10,
+      "passive_y_m": -0.08200136409231314,
+      "loaded_y_m": 0.06371082875284402,
+      "face_pair_y_p10_m": 0.0023671746253967284
+    },
+    {
+      "frame": 35,
+      "phase": "push_out",
+      "time_s": 0.06560499999999522,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 26,
+      "passive_y_m": -0.08199998871243178,
+      "loaded_y_m": 0.06513885396324341,
+      "face_pair_y_p10_m": 0.0032305797562003137
+    },
+    {
+      "frame": 36,
+      "phase": "push_out",
+      "time_s": 0.06826999999999789,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 17,
+      "passive_y_m": -0.08194367341600178,
+      "loaded_y_m": 0.0664524616144188,
+      "face_pair_y_p10_m": 0.00379168801009655
+    },
+    {
+      "frame": 37,
+      "phase": "push_out",
+      "time_s": 0.07094000000000056,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08181324012358823,
+      "loaded_y_m": 0.06784794167113269,
+      "face_pair_y_p10_m": 0.00478155268356204
+    },
+    {
+      "frame": 38,
+      "phase": "push_out",
+      "time_s": 0.07360500000000322,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08161332560513228,
+      "loaded_y_m": 0.06925025519281025,
+      "face_pair_y_p10_m": 0.005607236176729202
+    },
+    {
+      "frame": 39,
+      "phase": "push_out",
+      "time_s": 0.07627000000000589,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 7,
+      "passive_y_m": -0.08154610451300316,
+      "loaded_y_m": 0.07058335025252649,
+      "face_pair_y_p10_m": 0.006281412858515978
+    },
+    {
+      "frame": 40,
+      "phase": "push_out",
+      "time_s": 0.07894000000000856,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.0815355863788071,
+      "loaded_y_m": 0.07201970647448948,
+      "face_pair_y_p10_m": 0.006984575092792511
+    },
+    {
+      "frame": 41,
+      "phase": "push_out",
+      "time_s": 0.08160500000001122,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 2,
+      "passive_y_m": -0.08153758807168589,
+      "loaded_y_m": 0.07334545349810125,
+      "face_pair_y_p10_m": 0.007472892012447119
+    },
+    {
+      "frame": 42,
+      "phase": "push_out",
+      "time_s": 0.08427000000001389,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08156185130303577,
+      "loaded_y_m": 0.07463062933474074,
+      "face_pair_y_p10_m": 0.007877176045440137
+    },
+    {
+      "frame": 43,
+      "phase": "push_out",
+      "time_s": 0.08694000000001656,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08159766465372674,
+      "loaded_y_m": 0.07599965499866851,
+      "face_pair_y_p10_m": 0.00834663831628859
+    },
+    {
+      "frame": 44,
+      "phase": "return_to_contact",
+      "time_s": 0.08844000000001806,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08161116318706246,
+      "loaded_y_m": 0.07639954071322981,
+      "face_pair_y_p10_m": 0.008350305072963238
+    },
+    {
+      "frame": 45,
+      "phase": "return_to_contact",
+      "time_s": 0.08994000000001956,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 3,
+      "passive_y_m": -0.08160402452409328,
+      "loaded_y_m": 0.07632391569882817,
+      "face_pair_y_p10_m": 0.008072968851774932
+    },
+    {
+      "frame": 46,
+      "phase": "return_to_contact",
+      "time_s": 0.09144000000002106,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08157816981471128,
+      "loaded_y_m": 0.07596020112469368,
+      "face_pair_y_p10_m": 0.007536493940278888
+    },
+    {
+      "frame": 47,
+      "phase": "return_to_contact",
+      "time_s": 0.09294000000002256,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 16,
+      "passive_y_m": -0.0815374889498756,
+      "loaded_y_m": 0.07543472415481088,
+      "face_pair_y_p10_m": 0.006905843853019178
+    },
+    {
+      "frame": 48,
+      "phase": "return_to_contact",
+      "time_s": 0.09444000000002406,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 14,
+      "passive_y_m": -0.08150796304267421,
+      "loaded_y_m": 0.07482521513644916,
+      "face_pair_y_p10_m": 0.0063173876143991945
+    },
+    {
+      "frame": 49,
+      "phase": "return_to_contact",
+      "time_s": 0.09594000000002556,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 40,
+      "passive_y_m": -0.08149331016035671,
+      "loaded_y_m": 0.07420431148366666,
+      "face_pair_y_p10_m": 0.005834617326036096
+    },
+    {
+      "frame": 50,
+      "phase": "return_to_contact",
+      "time_s": 0.09744000000002706,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 64,
+      "passive_y_m": -0.08149595802906198,
+      "loaded_y_m": 0.07356491618043838,
+      "face_pair_y_p10_m": 0.005482242489233613
+    },
+    {
+      "frame": 51,
+      "phase": "return_to_contact",
+      "time_s": 0.09894000000002856,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 80,
+      "passive_y_m": -0.08151222406766978,
+      "loaded_y_m": 0.07289789650824594,
+      "face_pair_y_p10_m": 0.005114967096596957
+    },
+    {
+      "frame": 52,
+      "phase": "return_to_contact",
+      "time_s": 0.10044000000003006,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 104,
+      "passive_y_m": -0.08154035995906345,
+      "loaded_y_m": 0.07224019247081886,
+      "face_pair_y_p10_m": 0.004837096063420176
+    },
+    {
+      "frame": 53,
+      "phase": "return_to_contact",
+      "time_s": 0.10194000000003156,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 129,
+      "passive_y_m": -0.08157680488162572,
+      "loaded_y_m": 0.07158870129168442,
+      "face_pair_y_p10_m": 0.004573546396568417
+    },
+    {
+      "frame": 54,
+      "phase": "return_to_contact",
+      "time_s": 0.10344000000003306,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 148,
+      "passive_y_m": -0.08162609264584944,
+      "loaded_y_m": 0.07091048423836832,
+      "face_pair_y_p10_m": 0.0043692703824490305
+    },
+    {
+      "frame": 55,
+      "phase": "return_to_contact",
+      "time_s": 0.10494000000003456,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 189,
+      "passive_y_m": -0.08167735830837587,
+      "loaded_y_m": 0.07023221309655157,
+      "face_pair_y_p10_m": 0.004222140973433852
+    },
+    {
+      "frame": 56,
+      "phase": "return_to_contact",
+      "time_s": 0.10644000000003606,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 225,
+      "passive_y_m": -0.08173765200335248,
+      "loaded_y_m": 0.06956833737297861,
+      "face_pair_y_p10_m": 0.0040734030306339266
+    },
+    {
+      "frame": 57,
+      "phase": "return_to_contact",
+      "time_s": 0.10794000000003756,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 213,
+      "passive_y_m": -0.08179543053093473,
+      "loaded_y_m": 0.0689196600537241,
+      "face_pair_y_p10_m": 0.004000478750094771
+    },
+    {
+      "frame": 58,
+      "phase": "return_to_contact",
+      "time_s": 0.10944000000003906,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 228,
+      "passive_y_m": -0.08185393004058365,
+      "loaded_y_m": 0.06831864404790092,
+      "face_pair_y_p10_m": 0.003917604684829712
+    },
+    {
+      "frame": 59,
+      "phase": "return_to_contact",
+      "time_s": 0.11094000000004056,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 263,
+      "passive_y_m": -0.0819115376613526,
+      "loaded_y_m": 0.0677795989441806,
+      "face_pair_y_p10_m": 0.0037800054997205734
+    },
+    {
+      "frame": 60,
+      "phase": "return_to_contact",
+      "time_s": 0.11244000000004206,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 287,
+      "passive_y_m": -0.08196396523630484,
+      "loaded_y_m": 0.06719819739946997,
+      "face_pair_y_p10_m": 0.003685664897784591
+    },
+    {
+      "frame": 61,
+      "phase": "return_to_contact",
+      "time_s": 0.11394000000004356,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 280,
+      "passive_y_m": -0.08203238297895758,
+      "loaded_y_m": 0.06658505230327724,
+      "face_pair_y_p10_m": 0.0035767967812716964
+    },
+    {
+      "frame": 62,
+      "phase": "return_to_contact",
+      "time_s": 0.11544000000004506,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 284,
+      "passive_y_m": -0.08210973748521332,
+      "loaded_y_m": 0.06594168980207268,
+      "face_pair_y_p10_m": 0.0034936335869133472
+    },
+    {
+      "frame": 63,
+      "phase": "return_to_contact",
+      "time_s": 0.11694000000004656,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 315,
+      "passive_y_m": -0.08218567786813158,
+      "loaded_y_m": 0.06530824508146137,
+      "face_pair_y_p10_m": 0.0034032135270535948
+    },
+    {
+      "frame": 64,
+      "phase": "return_to_contact",
+      "time_s": 0.11844000000004806,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 333,
+      "passive_y_m": -0.08227470314024407,
+      "loaded_y_m": 0.06467210520412511,
+      "face_pair_y_p10_m": 0.0033036624081432824
+    },
+    {
+      "frame": 65,
+      "phase": "return_to_contact",
+      "time_s": 0.11994000000004956,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 399,
+      "passive_y_m": -0.08236809815016627,
+      "loaded_y_m": 0.06405284324236935,
+      "face_pair_y_p10_m": 0.0032177438959479334
+    },
+    {
+      "frame": 66,
+      "phase": "return_to_contact",
+      "time_s": 0.12144000000005106,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 400,
+      "passive_y_m": -0.08247339419786481,
+      "loaded_y_m": 0.06344669206369832,
+      "face_pair_y_p10_m": 0.003166368789970875
+    },
+    {
+      "frame": 67,
+      "phase": "return_to_contact",
+      "time_s": 0.12294000000005256,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 434,
+      "passive_y_m": -0.08255987608027116,
+      "loaded_y_m": 0.06283842462709564,
+      "face_pair_y_p10_m": 0.0031119546853005885
+    },
+    {
+      "frame": 68,
+      "phase": "return_to_contact",
+      "time_s": 0.12444000000005406,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 452,
+      "passive_y_m": -0.08264696589027445,
+      "loaded_y_m": 0.062217148520592284,
+      "face_pair_y_p10_m": 0.0030735110864043235
+    },
+    {
+      "frame": 69,
+      "phase": "return_to_contact",
+      "time_s": 0.12594000000005556,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 468,
+      "passive_y_m": -0.08273644122286378,
+      "loaded_y_m": 0.061575526037339234,
+      "face_pair_y_p10_m": 0.0030305080115795137
+    },
+    {
+      "frame": 70,
+      "phase": "return_to_contact",
+      "time_s": 0.12744000000005706,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 480,
+      "passive_y_m": -0.0828324202754408,
+      "loaded_y_m": 0.06093255713253522,
+      "face_pair_y_p10_m": 0.0029895138926804067
+    },
+    {
+      "frame": 71,
+      "phase": "reopen",
+      "time_s": 0.12894000000005856,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 250,
+      "passive_y_m": -0.08291935450692536,
+      "loaded_y_m": 0.060618514689378886,
+      "face_pair_y_p10_m": 0.002998252213001251
+    },
+    {
+      "frame": 72,
+      "phase": "reopen",
+      "time_s": 0.13044000000006006,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 8,
+      "passive_y_m": -0.08297538272904516,
+      "loaded_y_m": 0.06075089788387322,
+      "face_pair_y_p10_m": 0.003065821062773466
+    },
+    {
+      "frame": 73,
+      "phase": "reopen",
+      "time_s": 0.13194000000006156,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 15,
+      "passive_y_m": -0.08301493685058468,
+      "loaded_y_m": 0.06113512377714928,
+      "face_pair_y_p10_m": 0.003245681244879961
+    },
+    {
+      "frame": 74,
+      "phase": "reopen",
+      "time_s": 0.13344000000006306,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 16,
+      "passive_y_m": -0.08304261351234266,
+      "loaded_y_m": 0.06166975396264977,
+      "face_pair_y_p10_m": 0.003507222142070532
+    },
+    {
+      "frame": 75,
+      "phase": "reopen",
+      "time_s": 0.13494000000006456,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 11,
+      "passive_y_m": -0.08305754355398018,
+      "loaded_y_m": 0.062283766751754566,
+      "face_pair_y_p10_m": 0.0037680224515497683
+    },
+    {
+      "frame": 76,
+      "phase": "reopen",
+      "time_s": 0.13644000000006606,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 5,
+      "passive_y_m": -0.0830677552446438,
+      "loaded_y_m": 0.06294499949133053,
+      "face_pair_y_p10_m": 0.0040595104917883875
+    },
+    {
+      "frame": 77,
+      "phase": "reopen",
+      "time_s": 0.13794000000006756,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 2,
+      "passive_y_m": -0.08307682688374694,
+      "loaded_y_m": 0.06364701261308639,
+      "face_pair_y_p10_m": 0.004326479695737362
+    },
+    {
+      "frame": 78,
+      "phase": "reopen",
+      "time_s": 0.13944000000006906,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 4,
+      "passive_y_m": -0.08308316828916876,
+      "loaded_y_m": 0.06437007394386203,
+      "face_pair_y_p10_m": 0.0046931293327361345
+    },
+    {
+      "frame": 79,
+      "phase": "reopen",
+      "time_s": 0.14094000000007056,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 5,
+      "passive_y_m": -0.083070749620136,
+      "loaded_y_m": 0.06509971734453736,
+      "face_pair_y_p10_m": 0.005015100631862879
+    },
+    {
+      "frame": 80,
+      "phase": "reopen",
+      "time_s": 0.14244000000007206,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08305825778726243,
+      "loaded_y_m": 0.06580982740640588,
+      "face_pair_y_p10_m": 0.005277140531688929
+    },
+    {
+      "frame": 81,
+      "phase": "reopen",
+      "time_s": 0.14394000000007356,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08305087006455183,
+      "loaded_y_m": 0.066521511389055,
+      "face_pair_y_p10_m": 0.0055043123662471775
+    },
+    {
+      "frame": 82,
+      "phase": "reopen",
+      "time_s": 0.14544000000007506,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08304816104333183,
+      "loaded_y_m": 0.06723147615893019,
+      "face_pair_y_p10_m": 0.00579361068084836
+    },
+    {
+      "frame": 83,
+      "phase": "reopen",
+      "time_s": 0.14694000000007656,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08304964854618398,
+      "loaded_y_m": 0.06794588970768621,
+      "face_pair_y_p10_m": 0.006066265981644392
+    },
+    {
+      "frame": 84,
+      "phase": "reopen",
+      "time_s": 0.14844000000007807,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08305286480530341,
+      "loaded_y_m": 0.0686603034581923,
+      "face_pair_y_p10_m": 0.006307180225849152
+    },
+    {
+      "frame": 85,
+      "phase": "reopen",
+      "time_s": 0.14994000000007957,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08306049962623124,
+      "loaded_y_m": 0.06941349801853913,
+      "face_pair_y_p10_m": 0.006618331233039498
+    },
+    {
+      "frame": 86,
+      "phase": "reopen",
+      "time_s": 0.15144000000008107,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08306679516275904,
+      "loaded_y_m": 0.07016492554002642,
+      "face_pair_y_p10_m": 0.006867600884288549
+    },
+    {
+      "frame": 87,
+      "phase": "reopen",
+      "time_s": 0.15294000000008257,
+      "piece_count": 2,
+      "knife_z_m": 0.13871047342534853,
+      "compressive_nodes": 0,
+      "passive_y_m": -0.08307844387215531,
+      "loaded_y_m": 0.07089095030809402,
+      "face_pair_y_p10_m": 0.007043935684487223
+    }
+  ],
+  "checks": {
+    "intact": true,
+    "partial_cut_connected": true,
+    "through_cut_disconnected": true,
+    "independent_push": true,
+    "faces_open": true,
+    "recontact": true,
+    "reopened": true,
+    "stable_ids": true
+  },
+  "minimum_recorded_grip_clearance_m": 0.04372302228584886,
+  "support_slot_width_m": 0.02400000000000002,
+  "blade_overtravel_in_slot_m": 0.01,
+  "particles_marked_at_half_depth": 6257,
+  "loaded_piece": 1,
+  "cut_neighbor_pairs": 1214,
+  "particles_per_piece": [
+    61814,
+    52703
+  ],
+  "mass_per_piece_kg": [
+    0.41311576118096127,
+    0.3798164237500714
+  ],
+  "unloaded_endpoint_y_m": {
+    "passive": -0.082179500795887,
+    "loaded": 0.06120005462886425
+  },
+  "body_acceleration_m_s2": 180.0,
+  "push_force_N": 74.36083701257303,
+  "push_displacement_minus_unloaded_mm": {
+    "passive": 0.581836142160258,
+    "loaded": 14.79960036980426
+  },
+  "passed": true
+}

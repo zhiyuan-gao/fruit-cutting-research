@@ -1,5 +1,13 @@
 --- upstream/sim.py
 +++ fracture/sim.py
+@@ -185,2 +185,7 @@
+         n = self.n_grid
++        self.additional_retention = 0.98
++        if "velocity_decay_per_s" in bc:
++            self.grid_damping = 0.0
++            self.particle_damping = 0.0
++            self.additional_retention = float(np.exp(-bc["velocity_decay_per_s"] * self.dt))
+         self.grid_v = ti.Vector.field(3, dtype=ti.f32, shape=(n,n,n))
 @@ -656,9 +656,12 @@
      def p2g(self):
          ti.loop_config(block_dim=256)  # better occupancy on GPU
@@ -71,3 +79,8 @@
                          new_v += weight * vg
                          new_C += 4.0*inv_dx*weight * vg.outer_product(dpos)
  
+@@ -870,3 +875,3 @@
+             # Apply additional velocity damping to reduce bouncing
+-            part.v *= 0.98  # 2% additional damping per timestep
++            part.v *= self.additional_retention
+             # speed cap

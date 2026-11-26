@@ -46,6 +46,14 @@ class RigidKnifeCollider(KnifeCollider):
 
 
 @ti.data_oriented
+class RegisteredBoardKnifeCollider(RigidKnifeCollider):
+    @ti.func
+    def _board_sample(self, p):
+        # The board has its own XYZ origin and voxel size, independent of the knife pack.
+        return self._board.sample(p)
+
+
+@ti.data_oriented
 class RigidKnifeControl:
     def __init__(self, sim, initial):
         self.sim = sim

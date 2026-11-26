@@ -26,11 +26,40 @@ app = SimulationApp(
     experience="/isaac-sim/apps/isaacsim.exp.base.python.kit",
 )
 import omni.usd
+import numpy as np
 from pxr import UsdGeom, UsdShade, UsdPhysics
 
 root = Path(__file__).resolve().parent
 ctx = omni.usd.get_context()
 results = {}
+
+
+def check_piece_nodes(stage, times, count):
+    groups = [p for p in stage.GetPrimAtPath("/World/Fruit").GetChildren() if p.HasAttribute("mpm:pieceId")]
+    particles = {}
+    for group in groups:
+        assert group.IsA(UsdGeom.Xform) and not group.HasAPI(UsdPhysics.RigidBodyAPI)
+        ids = []
+        for child in group.GetChildren():
+            points = UsdGeom.Points(child)
+            ids.extend(points.GetIdsAttr().Get())
+            for frame in points.GetPointsAttr().GetTimeSamples():
+                coords = np.asarray(points.GetPointsAttr().Get(frame))
+                assert len(coords) == len(points.GetIdsAttr().Get()) and np.isfinite(coords).all()
+        assert len(set(ids)) == len(ids)
+        particles[str(group.GetName())] = set(ids)
+    first_split = None
+    for frame in times:
+        visible = [p for p in groups if UsdGeom.Imageable(p).ComputeVisibility(frame) != UsdGeom.Tokens.invisible]
+        assert len(visible) == count.Get(frame)
+        ids = [particles[str(p.GetName())] for p in visible]
+        assert set.union(*ids) == particles["Whole"] and sum(map(len, ids)) == len(particles["Whole"])
+        if len(visible) > 1 and first_split is None:
+            first_split = frame
+        if first_split is not None:
+            assert len(visible) == 2
+    return dict(particle_count=len(particles["Whole"]), first_split_frame=first_split,
+                nodes=[str(p.GetPath()) for p in groups])
 
 
 def check():
@@ -71,6 +100,9 @@ def check():
             p.IsA(UsdGeom.Points) for p in stage.Traverse()
         )
         results[str(args.cut)] = {"frames": len(times)}
+        count = stage.GetDefaultPrim().GetAttribute("mpm:pieceCount")
+        if count:
+            results[str(args.cut)].update(check_piece_nodes(stage, times, count))
     print(json.dumps(results, indent=2), flush=True)
 
 

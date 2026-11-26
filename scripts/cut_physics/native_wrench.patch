@@ -1,0 +1,42 @@
+--- upstream/sim.py
++++ coupon/sim.py
+@@ -743,4 +743,5 @@
+                     ti.atomic_add(self.knife_impulse_g[None][1], m * dv[1])
+                     ti.atomic_add(self.knife_impulse_g[None][2], m * dv[2])
++                    self.probe.contact(pos, m * dv)
+                     # Split accumulators: blade vs handle (for EEF force averaging)
+                     if self.knife.is_blade(pos) == 1:
+@@ -770,4 +771,6 @@
+                 if v_len > v_cap_grid:
+                     v = (v_cap_grid / (v_len + 1e-12)) * v
++                if ti.abs(pos[2]) >= self.probe.anchor:
++                    v = ti.Vector.zero(ti.f32, 3)
+                 self.grid_v[I] = v
+
+@@ -869,5 +872,5 @@
+             part.v = (1.0 - self.particle_damping) * new_v
+             # Apply additional velocity damping to reduce bouncing
+-            part.v *= 0.98  # 2% additional damping per timestep
++            # Coupon uses zero additional per-step damping.
+             # speed cap
+             # Enhanced speed cap with gradual limiting
+@@ -896,4 +899,5 @@
+             part.x += self.dt * part.v
+
++            before_projection = part.x
+             # Particle-level projection and collision
+             contact = self.knife.classify_at(part.x)
+@@ -930,5 +934,7 @@
+
+                     # Compose back
++                    before = part.v
+                     part.v = vknife + vn_new * n + vt_new
++                    self.probe.contact(part.x, part.mass * (part.v-before))
+                 # else: separating or far — do NOT force normal to follow the knife; leave part.v as is.
+
+@@ -972,4 +978,5 @@
+                     part.x -= (self.board.sample(part.x) - eps) * n
+
++            self.probe.project(part.x-before_projection)
+             # Clamp to domain
+             for d in ti.static(range(3)):

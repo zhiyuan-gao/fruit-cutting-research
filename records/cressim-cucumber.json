@@ -1,0 +1,218 @@
+{
+  "source": "https://github.com/yafei-ou/CRESSim-MPM/tree/09aa5009b8580351f516b6df7660e87821fc5eb6",
+  "hardware": "RTX 4070, CUDA toolkit 11.8, SM89, upstream GPU MLS-MPM",
+  "official_smoke": "Official example_cutting physics loop with headless display callback, 310 frames, 10000 finite particles.",
+  "sample": "examples/cucumber/2026_0000",
+  "n": 114517,
+  "mass_kg": 0.792932185014142,
+  "materials": {
+    "Peel": {
+      "mode": "soft_mpm",
+      "density_kg_m3": 1059.7529710635251,
+      "E_MPa": 11.63072416738605,
+      "nu": 0.29605818603443196
+    },
+    "Pulp": {
+      "mode": "soft_mpm",
+      "density_kg_m3": 965.8057479783803,
+      "E_MPa": 1.6423175876085674,
+      "nu": 0.3490658209544148
+    },
+    "SeedChamber": {
+      "mode": "soft_mpm",
+      "density_kg_m3": 943.0680254909008,
+      "E_MPa": 1.7107047301384053,
+      "nu": 0.3994228088205276
+    }
+  },
+  "setup": {
+    "grid_mm": 4,
+    "substep_us": 7.62939453125,
+    "kinematic_update_us": 244.140625,
+    "trial_units": "positions m, seconds; CRESSim internally cm, g, s",
+    "support_slot_mm": 24,
+    "start_tip_m": 0.12369,
+    "half_depth_tip_m": 0.06656,
+    "through_tip_m": 0.021,
+    "half_withdraw_tip_m": 0.13869,
+    "full_withdraw_tip_m": 0.245,
+    "blade": "native quad slicer 160 x 61.4 mm, fatten 2 mm on each side, friction 0",
+    "speed_m_s": 4,
+    "gravity_m_s2": 9.81,
+    "support_friction": 0.35,
+    "test_duration_ms": 31.25,
+    "half_open": "Material patches 12-35 mm to either side above z=78.56 mm, prescribed axial movement 4 mm each over 31.25 ms; half_free/sham_free hold the same patches at zero displacement.",
+    "full_move": "Right component receives +0.6 m/s once after withdrawal. Free runs receive zero kick. CRESSim contact and MPM damping used, no extra velocity decay.",
+    "side_tracker": "When the straight finite cutting edge reaches particle height, record its side. Exclude opposite-side reference edges within the 2.5 mm rest graph. Geometric graph check, separate from the physical opening test."
+  },
+  "half": {
+    "material_components_at_depth": 1,
+    "cases": {
+      "half_load": {
+        "full_depth": {
+          "upper": 4.7121968269348145,
+          "lower": 2.0104832649230957
+        },
+        "withdrawn": {
+          "upper": 5.129537105560303,
+          "lower": 1.9668768644332886
+        },
+        "end": {
+          "upper": 5.257971286773682,
+          "lower": 1.9786040782928467
+        },
+        "grip_median_shift_mm": [
+          -3.9721839427948,
+          3.9690747261047363
+        ],
+        "extra_vs_hold_mm": {
+          "upper": 0.23798131942749023,
+          "lower": -0.0003809928894042969
+        }
+      },
+      "half_free": {
+        "full_depth": {
+          "upper": 4.712195873260498,
+          "lower": 2.0104870796203613
+        },
+        "withdrawn": {
+          "upper": 5.129570484161377,
+          "lower": 1.9668834209442139
+        },
+        "end": {
+          "upper": 5.019989967346191,
+          "lower": 1.978985071182251
+        },
+        "grip_median_shift_mm": [
+          -0.0013820827007293701,
+          0.0005364418029785156
+        ]
+      },
+      "sham_load": {
+        "full_depth": {
+          "upper": 2.0250966548919678,
+          "lower": 1.9843913316726685
+        },
+        "withdrawn": {
+          "upper": 2.0272321701049805,
+          "lower": 1.982064962387085
+        },
+        "end": {
+          "upper": 2.036184072494507,
+          "lower": 1.9825222492218018
+        },
+        "grip_median_shift_mm": [
+          -3.9710402488708496,
+          3.968648672103882
+        ],
+        "extra_vs_hold_mm": {
+          "upper": 0.00871729850769043,
+          "lower": 0.0006211996078491211
+        }
+      },
+      "sham_free": {
+        "full_depth": {
+          "upper": 2.0250985622406006,
+          "lower": 1.984395980834961
+        },
+        "withdrawn": {
+          "upper": 2.0272369384765625,
+          "lower": 1.9820657968521118
+        },
+        "end": {
+          "upper": 2.0274667739868164,
+          "lower": 1.9819010496139526
+        },
+        "grip_median_shift_mm": [
+          -0.0009313225746154785,
+          -0.0007580965757369995
+        ]
+      }
+    },
+    "pair_spacing_definition": "Median signed axial center spacing of original neighbors straddling the cut, grouped by original height above 74.56 mm or below 58.56 mm. This includes rest particle spacing (~2 mm)."
+  },
+  "full": {
+    "native_pair_disagreeing_ids": 1,
+    "split_pair_disagreeing_ids": 0,
+    "finer_pair_disagreeing_ids": 0,
+    "particles_by_side": [
+      51627,
+      62890
+    ],
+    "components": 2,
+    "native_extra_mm": {
+      "loaded": 8.93362506280455,
+      "passive": 8.59038480776561
+    },
+    "independent_grids_extra_mm": {
+      "loaded": 5.7244554782774815,
+      "passive": 0
+    },
+    "independent_passive_note": "Both loaded and unloaded composite replays use the same independent passive grid trajectory. Its zero additional response is imposed by construction. There is no inter-piece collision coupling after this hand-off.",
+    "independent_passive_absolute_after_withdraw_mm": -14.410093977973638,
+    "handoff": "At full depth in primary 7.629 us run. Each retained group keeps all stress/deformation history by a matched complete replay followed by masking the complementary particles.",
+    "no_load_full_cut_cm_max_z": 26.526918411254883,
+    "directly_loaded_motion_reference": "Additional axial center-of-mass displacement over the post-withdrawal interval, subtracting the same interval in the no-kick control. Restrict each comparison to IDs assigned to the same side in both GPU replays."
+  },
+  "geometry": {
+    "native_postwithdraw_min_tool_clearance_mm": 10.085776448249817,
+    "during_motion": "Linear tests across recorded kinematic updates (16 or 32 etc. substeps depending on dt). Cross the mid-plane within the finite blade footprint, excluding its 1 mm rim. Not an exhaustive physics-substep CCD test.",
+    "unique_crossings": 0,
+    "events": 0,
+    "tracked_particle": 71186,
+    "tracked_min_signed_y_mm": 2.0000003278255463,
+    "example_pair": [
+      71185,
+      71186
+    ],
+    "rest_pair_mm": 2.035535361822792,
+    "through_depth_pair_mm": 0.850592315196991,
+    "withdrawn_pair_mm": 0.011415930464863777,
+    "end_pair_mm": 0.011410308070480824
+  },
+  "native_no_kick_sensitivity_by_dt_us": {
+    "15.259": {
+      "half_depth_neighbor_spacing_mm": {
+        "upper": 4.813343048095703,
+        "lower": 2.0141546726226807
+      },
+      "endpoint_neighbor_spacing_mm": {
+        "upper": 59.3818244934082,
+        "lower": 61.49604415893555
+      },
+      "endpoint_max_height_mm": 268.7801513671875
+    },
+    "7.629": {
+      "half_depth_neighbor_spacing_mm": {
+        "upper": 4.7121968269348145,
+        "lower": 2.010486125946045
+      },
+      "endpoint_neighbor_spacing_mm": {
+        "upper": 7.051814556121826,
+        "lower": 4.736674785614014
+      },
+      "endpoint_max_height_mm": 265.2691955566406
+    },
+    "3.815": {
+      "half_depth_neighbor_spacing_mm": {
+        "upper": 4.21581506729126,
+        "lower": 2.007504940032959
+      },
+      "endpoint_neighbor_spacing_mm": {
+        "upper": 7.613041400909424,
+        "lower": 5.804697036743164
+      },
+      "endpoint_max_height_mm": 235.75648498535156
+    }
+  },
+  "finer_native_extra_mm": {
+    "loaded": 7.839061357168359,
+    "passive": 7.985973813789751
+  },
+  "notes": [
+    "Single reference specimen. Native slicer, flat blade and contact envelope replace the previous wedge.",
+    "Sensitivity includes a coarse immediate-handoff run which reached the grid-boundary guard after withdrawal; excluded from quantitative comparison. Independent-grid primary branch ran at the finer step.",
+    "A separate repeat of the 7.629 us native full-cut run reached the grid boundary. Reported numeric results are from completed bounded runs. The native USD uses five full-particle keyframes from the measured run.",
+    "USD and video are replays of CRESSim coordinates. USD nodes are selectable, the replay has no live PhysX interaction."
+  ]
+}

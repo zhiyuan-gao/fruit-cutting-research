@@ -8,6 +8,7 @@ import numpy as np
 import taichi as ti
 
 from adapter import TO_WORLD, UPSTREAM
+from blade_geometry import mesh_lower_edge
 
 
 def load_fracture_core(directory):
@@ -25,7 +26,7 @@ def load_fracture_core(directory):
 
 @ti.data_oriented
 class SweptFracture:
-    def __init__(self, sim):
+    def __init__(self, sim, blade_mesh=None, grip_start=None):
         self.sim = sim
         pack = sim.knife_pack
         sdf = pack["sdf"]
@@ -36,12 +37,15 @@ class SweptFracture:
         self.columns = sdf.shape[2]
         edge = np.zeros((self.columns, 3), np.float32)
         valid = np.zeros(self.columns, np.int32)
-        for i in range(self.columns):
-            z, y = np.where(solid[:, :, i])
-            if y.size:
-                bottom = y.min()
-                edge[i] = origin + self.voxel * np.array([i, bottom, z[y == bottom].mean()])
-                valid[i] = 1
+        if blade_mesh is not None:
+            edge, valid = mesh_lower_edge(blade_mesh, self.x0 + self.voxel * np.arange(self.columns), grip_start)
+        else:
+            for i in range(self.columns):
+                z, y = np.where(solid[:, :, i])
+                if y.size:
+                    bottom = y.min()
+                    edge[i] = origin + self.voxel * np.array([i, bottom, z[y == bottom].mean()])
+                    valid[i] = 1
         self.edge = ti.Vector.field(3, ti.f32, shape=self.columns)
         self.edge.from_numpy(edge)
         self.valid = ti.field(ti.i32, shape=self.columns)

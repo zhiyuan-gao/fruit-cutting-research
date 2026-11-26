@@ -1,0 +1,215 @@
+{
+  "source": "cucumber.usdc",
+  "source_sha256": "4e141d2a76f088bc2651cb8e28f2cc06703fe203c6e224a62bdfa6336f00d97e",
+  "method": "ipctk.TightInclusionCCD.point_triangle_ccd",
+  "version": "1.3.1",
+  "tolerance_m": 1e-09,
+  "conservative_rescaling": 0.99,
+  "minimum_separation_m": 0.0,
+  "scope": "Offline linear interpolation between consecutive archived USD frames, point against moving knife triangles. Returned fractions are conservative bounds. No physics substeps or contact response replayed.",
+  "knife_center_y_m": -0.010128952754532872,
+  "intervals": [
+    {
+      "frames": [
+        3,
+        4
+      ],
+      "particle_id": 71185,
+      "start_world_m": [
+        -0.023873619735240936,
+        -0.006804021541029215,
+        0.09764377772808075
+      ],
+      "end_world_m": [
+        -0.023873530328273773,
+        -0.006804339587688446,
+        0.09759562462568283
+      ],
+      "side_offsets_mm": [
+        3.3249312135036573,
+        3.324613166844426
+      ],
+      "candidate_triangles": 0,
+      "hits": []
+    },
+    {
+      "frames": [
+        3,
+        4
+      ],
+      "particle_id": 71186,
+      "start_world_m": [
+        -0.023872926831245422,
+        -0.008839553222060204,
+        0.0976468101143837
+      ],
+      "end_world_m": [
+        -0.023872993886470795,
+        -0.008839745074510574,
+        0.09759854525327682
+      ],
+      "side_offsets_mm": [
+        1.2893995324726686,
+        1.2892076800222978
+      ],
+      "candidate_triangles": 0,
+      "hits": []
+    },
+    {
+      "frames": [
+        4,
+        5
+      ],
+      "particle_id": 71185,
+      "start_world_m": [
+        -0.023873530328273773,
+        -0.006804339587688446,
+        0.09759562462568283
+      ],
+      "end_world_m": [
+        -0.023882953450083733,
+        -0.007087535224854946,
+        0.09724875539541245
+      ],
+      "side_offsets_mm": [
+        3.324613166844426,
+        3.041417529677926
+      ],
+      "candidate_triangles": 0,
+      "hits": []
+    },
+    {
+      "frames": [
+        4,
+        5
+      ],
+      "particle_id": 71186,
+      "start_world_m": [
+        -0.023872993886470795,
+        -0.008839745074510574,
+        0.09759854525327682
+      ],
+      "end_world_m": [
+        -0.023892538622021675,
+        -0.009451201185584068,
+        0.09695078432559967
+      ],
+      "side_offsets_mm": [
+        1.2892076800222978,
+        0.6777515689488037
+      ],
+      "candidate_triangles": 2,
+      "hits": [
+        {
+          "triangle": 6541,
+          "collision_fraction_bound": 0.862324595451355,
+          "triangle_lateral_centroid_mm": 0.8329998174788772
+        }
+      ]
+    },
+    {
+      "frames": [
+        5,
+        6
+      ],
+      "particle_id": 71185,
+      "start_world_m": [
+        -0.023882953450083733,
+        -0.007087535224854946,
+        0.09724875539541245
+      ],
+      "end_world_m": [
+        -0.02394283004105091,
+        -0.008936149999499321,
+        0.09524460136890411
+      ],
+      "side_offsets_mm": [
+        3.041417529677926,
+        1.1928027550335512
+      ],
+      "candidate_triangles": 6,
+      "hits": [
+        {
+          "triangle": 6218,
+          "collision_fraction_bound": 0.9080104827880859,
+          "triangle_lateral_centroid_mm": 1.457999637102643
+        }
+      ]
+    },
+    {
+      "frames": [
+        5,
+        6
+      ],
+      "particle_id": 71186,
+      "start_world_m": [
+        -0.023892538622021675,
+        -0.009451201185584068,
+        0.09695078432559967
+      ],
+      "end_world_m": [
+        -0.02396923489868641,
+        -0.011733168736100197,
+        0.09446103125810623
+      ],
+      "side_offsets_mm": [
+        0.6777515689488037,
+        -1.6042159815673247
+      ],
+      "candidate_triangles": 13,
+      "hits": [
+        {
+          "triangle": 5747,
+          "collision_fraction_bound": 0.7978013753890991,
+          "triangle_lateral_centroid_mm": -1.1460003755405372
+        }
+      ]
+    },
+    {
+      "frames": [
+        6,
+        7
+      ],
+      "particle_id": 71185,
+      "start_world_m": [
+        -0.02394283004105091,
+        -0.008936149999499321,
+        0.09524460136890411
+      ],
+      "end_world_m": [
+        -0.02408701926469803,
+        -0.008760715834796429,
+        0.09059426933526993
+      ],
+      "side_offsets_mm": [
+        1.1928027550335512,
+        1.3682369197364435
+      ],
+      "candidate_triangles": 4,
+      "hits": []
+    },
+    {
+      "frames": [
+        6,
+        7
+      ],
+      "particle_id": 71186,
+      "start_world_m": [
+        -0.02396923489868641,
+        -0.011733168736100197,
+        0.09446103125810623
+      ],
+      "end_world_m": [
+        -0.024056004360318184,
+        -0.013896530494093895,
+        0.09155483543872833
+      ],
+      "side_offsets_mm": [
+        -1.6042159815673247,
+        -3.767577739561023
+      ],
+      "candidate_triangles": 4,
+      "hits": []
+    }
+  ]
+}
